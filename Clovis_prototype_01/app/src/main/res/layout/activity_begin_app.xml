@@ -2,63 +2,95 @@
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="2"
-    android:columnWidth="320dp"
+    android:columnCount="1"
+    android:columnWidth="800dp"
     android:orientation="vertical"
-    android:rowCount="2"
+    android:rowCount="3"
     android:stretchMode="columnWidth" >
 
     <LinearLayout
-        android:id="@+id/topleft"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:id="@+id/textarea"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
         android:layout_row="0"
+        android:orientation="horizontal"
         android:background="@drawable/shape" >
 
         <ImageView
-            android:id="@+id/myimage1"
+            android:id="@+id/tempicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"/>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/topright"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/shape" >
+        android:id="@+id/canvas"
+        android:layout_width="match_parent"
+        android:layout_height="640dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape">
 
-        <ImageView
-            android:id="@+id/myimage2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/bottomleft"
-        android:layout_width="160dp"
+        android:id="@+id/letters"
+        android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@drawable/shape" >
+        android:orientation="horizontal"
+        android:background="@drawable/shape">
 
-        <ImageView
-            android:id="@+id/myimage3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
     </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/topleft"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_row="0"-->
+        <!--android:background="@drawable/shape" >-->
 
-    <LinearLayout
-        android:id="@+id/bottomright"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:background="@drawable/shape" >
+        <!--<ImageView-->
+            <!--android:id="@+id/myimage1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+    <!--</LinearLayout>-->
 
-        <ImageView
-            android:id="@+id/myimage4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/topright"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:background="@drawable/shape" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/myimage2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/bottomleft"-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="400dp"-->
+        <!--android:background="@drawable/shape" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/myimage3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/bottomright"-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="400dp"-->
+        <!--android:background="@drawable/shape" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/myimage4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/ic_launcher" />-->
+    <!--</LinearLayout>-->
 
 </GridLayout>

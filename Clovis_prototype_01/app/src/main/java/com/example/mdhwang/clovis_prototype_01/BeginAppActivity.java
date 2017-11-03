@@ -22,14 +22,18 @@ public class BeginAppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_begin_app);
-        findViewById(R.id.myimage1).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.myimage2).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.myimage3).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.myimage4).setOnTouchListener(new MyTouchListener());
-        findViewById(R.id.topleft).setOnDragListener(new MyDragListener());
-        findViewById(R.id.topright).setOnDragListener(new MyDragListener());
-        findViewById(R.id.bottomleft).setOnDragListener(new MyDragListener());
-        findViewById(R.id.bottomright).setOnDragListener(new MyDragListener());
+        findViewById(R.id.tempicon).setOnTouchListener(new MyTouchListener());
+        findViewById(R.id.textarea).setOnDragListener(new MyDragListener());
+        findViewById(R.id.canvas).setOnDragListener(new MyDragListener());
+        findViewById(R.id.letters).setOnDragListener(new MyDragListener());
+//        findViewById(R.id.myimage1).setOnTouchListener(new MyTouchListener());
+//        findViewById(R.id.myimage2).setOnTouchListener(new MyTouchListener());
+//        findViewById(R.id.myimage3).setOnTouchListener(new MyTouchListener());
+//        findViewById(R.id.myimage4).setOnTouchListener(new MyTouchListener());
+//        findViewById(R.id.topleft).setOnDragListener(new MyDragListener());
+//        findViewById(R.id.topright).setOnDragListener(new MyDragListener());
+//        findViewById(R.id.bottomleft).setOnDragListener(new MyDragListener());
+//        findViewById(R.id.bottomright).setOnDragListener(new MyDragListener());
 //        Intent intent = getIntent();
 
     }
