@@ -67,6 +67,7 @@ public class BeginAppActivity extends AppCompatActivity {
                     owner.removeView(view);
                     LinearLayout container = (LinearLayout) v;
                     container.addView(view);
+
                     view.setVisibility(View.VISIBLE);
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
