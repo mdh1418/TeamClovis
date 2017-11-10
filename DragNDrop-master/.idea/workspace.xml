@@ -10,22 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc0c1454-23fb-46d9-930a-c6943695bab9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ClovisScrolling2/app/build.gradle" afterPath="$PROJECT_DIR$/../ClovisScrolling2/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/app/src/main/java/com/example/mdhwang/clovis_prototype_01/BeginAppActivity.java" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/src/main/java/com/example/mdhwang/clovis_prototype_01/BeginAppActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/app/src/main/java/com/example/mdhwang/clovis_prototype_01/MainActivity.java" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/src/main/java/com/example/mdhwang/clovis_prototype_01/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/.idea/modules.xml" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/app/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/app/gradle/wrapper/gradle-wrapper.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Clovis_prototype_01/build.gradle" afterPath="$PROJECT_DIR$/../Clovis_prototype_01/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DragNDrop_RelativeLayout.iws" />
@@ -2185,7 +2173,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="716" height="873" extended-state="1" />
+    <frame x="0" y="23" width="716" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
