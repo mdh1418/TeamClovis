@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     float dY;
     int lastAction;
 
+    ImageButton letterN;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
         final View dragView_a = findViewById(R.id.letter_a);
         dragView_a.setOnTouchListener(this);
+
+        letterN = (ImageButton) findViewById(R.id.letter_n);
+
+        letterN.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, "It works", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
