@@ -26,7 +26,7 @@ public class BeginAppActivity extends AppCompatActivity {
 //        findViewById(R.id.textarea).setOnDragListener(new MyDragListener());
         findViewById(R.id.canvas).setOnDragListener(new MyDragListener());
 
-    }22
+    }
     private final class MyTouchListener implements OnTouchListener {
         public boolean onTouch(View view, MotionEvent motionEvent) {
             if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
