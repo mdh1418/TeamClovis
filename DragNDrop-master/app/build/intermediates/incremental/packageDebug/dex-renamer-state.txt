@@ -1,0 +1,7 @@
+#Thu Nov 09 20:00:02 EST 2017
+base.0=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bed0659e4506e14eb471062be149515d1f4e2034
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a76d685ae8a242e86f30bc603a84eea259b3aed/classes.dex
+base.1=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a76d685ae8a242e86f30bc603a84eea259b3aed
+file.0=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bed0659e4506e14eb471062be149515d1f4e2034/classes.dex

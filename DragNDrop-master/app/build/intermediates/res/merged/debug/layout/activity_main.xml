@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/view_root"
@@ -15,6 +17,3 @@
         android:src="@drawable/ic_launcher" /> <!--Image used (see drawable folder)-->
 
 </RelativeLayout>
-
-
-<!-- From: file:/Users/amyliu/Downloads/DragNDrop-master/app/src/main/res/layout/activity_main.xml -->

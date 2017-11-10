@@ -1,0 +1,24 @@
+#Internal package file, do not edit.
+#Thu Nov 09 20:00:02 EST 2017
+2.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_
+5.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
+5.set=ANDROID_RESOURCE
+3.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a76d685ae8a242e86f30bc603a84eea259b3aed
+6.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_/resources.arsc
+2.set=ANDROID_RESOURCE
+4.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_
+count=7
+0.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bed0659e4506e14eb471062be149515d1f4e2034/classes.dex
+5.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_
+4.set=ANDROID_RESOURCE
+6.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_
+1.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_main.xml
+1.set=ANDROID_RESOURCE
+2.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_/res/menu/main.xml
+6.set=ANDROID_RESOURCE
+0.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bed0659e4506e14eb471062be149515d1f4e2034
+3.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a76d685ae8a242e86f30bc603a84eea259b3aed/classes.dex
+3.set=DEX
+1.base=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_
+4.file=/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/ic_launcher.png
+0.set=DEX

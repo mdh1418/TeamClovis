@@ -2,11 +2,31 @@
 <items version="2" >
 
     <item
-        jar="/Users/amyliu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
+        is-multidex="true"
+        jar="/Users/mdhwang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/amyliu/Downloads/DragNDrop-master/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-97a1eca1a8008f201d97aa672a887d978c831829.jar" />
+        <dex dex="/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_fcf2cd20eba641022347a75009dc0aaf9340238b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a8a0afd8e672cf75ef4182c8aad1bc674174a417">
+        <dex dex="/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_1a76d685ae8a242e86f30bc603a84eea259b3aed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/mdhwang/AndroidStudioProjects/TeamClovis/DragNDrop-master/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bed0659e4506e14eb471062be149515d1f4e2034/classes.dex" />
     </item>
 
 </items>
