@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:columnCount="1"
-    android:columnWidth="800dp"
+    android:columnWidth="200dp"
     android:orientation="vertical"
-    android:rowCount="3"
+    android:rowCount="1"
     android:stretchMode="columnWidth" >
 
     <LinearLayout
         android:id="@+id/canvas"
         android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:orientation="horizontal"
-        android:background="@drawable/shape">
+        android:layout_height="match_parent"
+        android:background="@drawable/shape"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/tempicon"

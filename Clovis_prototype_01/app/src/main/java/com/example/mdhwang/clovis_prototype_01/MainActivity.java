@@ -39,8 +39,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final View dragView = findViewById(R.id.letter_b);
-        dragView.setOnTouchListener(this);
+        final View dragView_b = findViewById(R.id.letter_b);
+        dragView_b.setOnTouchListener(this);
+
+        final View dragView_a = findViewById(R.id.letter_a);
+        dragView_a.setOnTouchListener(this);
     }
 
     @Override
@@ -69,6 +72,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 return false;
         }
         return true;
+    }
+
+    public void spawnImageView(View view) {
+//        ImageView image = new ImageView();
+
     }
 }
 
