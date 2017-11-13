@@ -51,7 +51,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
         letterN.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Toast.makeText(MainActivity.this, "It works", Toast.LENGTH_LONG).show();
+//                Toast.makeText(MainActivity.this, "It works", Toast.LENGTH_LONG).show();
+                ImageView image = new ImageView(MainActivity.this);
+                RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
+                image.setBackgroundResource(R.drawable.letter_n);
+                mylayout.addView(image);
             }
         });
     }
