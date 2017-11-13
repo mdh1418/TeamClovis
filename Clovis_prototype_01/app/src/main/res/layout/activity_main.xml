@@ -138,7 +138,7 @@
                 android:src="@drawable/letter_n" />
 
             <ImageButton
-                android:id="@+id/button_o"
+                android:id="@+id/letter_o"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"

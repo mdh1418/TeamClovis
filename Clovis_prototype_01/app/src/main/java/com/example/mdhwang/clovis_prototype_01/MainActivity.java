@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity{
     float dY;
     int lastAction;
 
-    ImageButton letterN;
+    ImageButton letterN, letterO;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,21 +44,38 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         final View dragView_b = findViewById(R.id.letter_b);
+
         dragView_b.setOnTouchListener(new MyTouchListener());
 
         final View dragView_a = findViewById(R.id.letter_a);
         dragView_a.setOnTouchListener(new MyTouchListener());
 
         letterN = (ImageButton) findViewById(R.id.letter_n);
-
+        letterO = (ImageButton) findViewById(R.id.letter_o);
         letterN.setOnClickListener(new MyClickListener());
+        letterO.setOnClickListener(new MyClickListener());
     }
 
     private final class MyClickListener implements OnClickListener{
         public void onClick(View view){
             ImageView image = new ImageView(MainActivity.this);
             RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
-            image.setBackgroundResource(R.drawable.letter_n);
+            switch (view.getId()){
+                case R.id.letter_a:
+                    image.setBackgroundResource(R.drawable.letter_a);
+                    break;
+                case R.id.letter_b:
+                    image.setBackgroundResource(R.drawable.letter_b);
+                    break;
+                case R.id.letter_n:
+                    image.setBackgroundResource(R.drawable.letter_n);
+                    break;
+                case R.id.letter_o:
+                    image.setBackgroundResource(R.drawable.letter_o);
+                    break;
+                default:
+                    break;
+            }
             mylayout.addView(image);
             image.setOnTouchListener(new MyTouchListener());
         }
