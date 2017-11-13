@@ -51,45 +51,7 @@ public class MainActivity extends AppCompatActivity{
         letterN = (ImageButton) findViewById(R.id.letter_n);
 
         letterN.setOnClickListener(new MyClickListener());
-//        letterN.setOnClickListener(new View.OnClickListener(){
-//            public void onClick(View v){
-////                Toast.makeText(MainActivity.this, "It works", Toast.LENGTH_LONG).show();
-//                ImageView image = new ImageView(MainActivity.this);
-//                RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
-//                image.setBackgroundResource(R.drawable.letter_n);
-//                mylayout.addView(image);
-//            }
-//        });
-//        letterN.setOnTouchListener(this);
     }
-
-//    @Override
-//    public boolean onTouch(View view, MotionEvent event) {
-//        switch (event.getActionMasked()) {
-//            case MotionEvent.ACTION_DOWN:
-//                dX = view.getX() - event.getRawX();
-//                dY = view.getY() - event.getRawY();
-//                lastAction = MotionEvent.ACTION_DOWN;
-//                view.invalidate();
-//
-//            case MotionEvent.ACTION_MOVE:
-//                view.setY(event.getRawY() + dY);
-//                view.setX(event.getRawX() + dX);
-//                lastAction = MotionEvent.ACTION_MOVE;
-//                view.invalidate();
-//
-//            case MotionEvent.ACTION_UP:
-//                break;
-//            case MotionEvent.ACTION_POINTER_DOWN:
-//                break;
-//            case MotionEvent.ACTION_POINTER_UP:
-//                break;
-//
-//            default:
-//                return false;
-//        }
-//        return true;
-//    }
 
     private final class MyClickListener implements OnClickListener{
         public void onClick(View view){
