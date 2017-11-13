@@ -24,12 +24,13 @@ import android.view.View;
 import android.view.View.DragShadowBuilder;
 import android.view.View.OnDragListener;
 import android.view.View.OnTouchListener;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+public class MainActivity extends AppCompatActivity{
     float dX;
     float dY;
     int lastAction;
@@ -42,55 +43,92 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         setContentView(R.layout.activity_main);
 
         final View dragView_b = findViewById(R.id.letter_b);
-        dragView_b.setOnTouchListener(this);
+        dragView_b.setOnTouchListener(new MyTouchListener());
 
         final View dragView_a = findViewById(R.id.letter_a);
-        dragView_a.setOnTouchListener(this);
+        dragView_a.setOnTouchListener(new MyTouchListener());
 
         letterN = (ImageButton) findViewById(R.id.letter_n);
 
-        letterN.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-//                Toast.makeText(MainActivity.this, "It works", Toast.LENGTH_LONG).show();
-                ImageView image = new ImageView(MainActivity.this);
-                RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
-                image.setBackgroundResource(R.drawable.letter_n);
-                mylayout.addView(image);
-            }
-        });
+        letterN.setOnClickListener(new MyClickListener());
+//        letterN.setOnClickListener(new View.OnClickListener(){
+//            public void onClick(View v){
+////                Toast.makeText(MainActivity.this, "It works", Toast.LENGTH_LONG).show();
+//                ImageView image = new ImageView(MainActivity.this);
+//                RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
+//                image.setBackgroundResource(R.drawable.letter_n);
+//                mylayout.addView(image);
+//            }
+//        });
+//        letterN.setOnTouchListener(this);
     }
 
-    @Override
-    public boolean onTouch(View view, MotionEvent event) {
-        switch (event.getActionMasked()) {
-            case MotionEvent.ACTION_DOWN:
-                dX = view.getX() - event.getRawX();
-                dY = view.getY() - event.getRawY();
-                lastAction = MotionEvent.ACTION_DOWN;
-                view.invalidate();
+//    @Override
+//    public boolean onTouch(View view, MotionEvent event) {
+//        switch (event.getActionMasked()) {
+//            case MotionEvent.ACTION_DOWN:
+//                dX = view.getX() - event.getRawX();
+//                dY = view.getY() - event.getRawY();
+//                lastAction = MotionEvent.ACTION_DOWN;
+//                view.invalidate();
+//
+//            case MotionEvent.ACTION_MOVE:
+//                view.setY(event.getRawY() + dY);
+//                view.setX(event.getRawX() + dX);
+//                lastAction = MotionEvent.ACTION_MOVE;
+//                view.invalidate();
+//
+//            case MotionEvent.ACTION_UP:
+//                break;
+//            case MotionEvent.ACTION_POINTER_DOWN:
+//                break;
+//            case MotionEvent.ACTION_POINTER_UP:
+//                break;
+//
+//            default:
+//                return false;
+//        }
+//        return true;
+//    }
 
-            case MotionEvent.ACTION_MOVE:
-                view.setY(event.getRawY() + dY);
-                view.setX(event.getRawX() + dX);
-                lastAction = MotionEvent.ACTION_MOVE;
-                view.invalidate();
-
-            case MotionEvent.ACTION_UP:
-                break;
-            case MotionEvent.ACTION_POINTER_DOWN:
-                break;
-            case MotionEvent.ACTION_POINTER_UP:
-                break;
-
-            default:
-                return false;
+    private final class MyClickListener implements OnClickListener{
+        public void onClick(View view){
+            ImageView image = new ImageView(MainActivity.this);
+            RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
+            image.setBackgroundResource(R.drawable.letter_n);
+            mylayout.addView(image);
+            image.setOnTouchListener(new MyTouchListener());
         }
-        return true;
-    }
-
-    public void spawnImageView(View view) {
-//        ImageView image = new ImageView();
 
     }
+    private final class MyTouchListener implements OnTouchListener{
+        public boolean onTouch(View view, MotionEvent event) {
+            switch (event.getActionMasked()) {
+                case MotionEvent.ACTION_DOWN:
+                    dX = view.getX() - event.getRawX();
+                    dY = view.getY() - event.getRawY();
+                    lastAction = MotionEvent.ACTION_DOWN;
+                    view.invalidate();
+
+                case MotionEvent.ACTION_MOVE:
+                    view.setY(event.getRawY() + dY);
+                    view.setX(event.getRawX() + dX);
+                    lastAction = MotionEvent.ACTION_MOVE;
+                    view.invalidate();
+
+                case MotionEvent.ACTION_UP:
+                    break;
+                case MotionEvent.ACTION_POINTER_DOWN:
+                    break;
+                case MotionEvent.ACTION_POINTER_UP:
+                    break;
+
+                default:
+                    return false;
+            }
+            return true;
+        }
+    }
+
 }
 
