@@ -35,23 +35,19 @@ public class MainActivity extends AppCompatActivity{
     float dY;
     int lastAction;
 
-    ImageButton letterN, letterO;
-
+    ImageButton letterA, letterB, letterN, letterO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final View dragView_b = findViewById(R.id.letter_b);
-
-        dragView_b.setOnTouchListener(new MyTouchListener());
-
-        final View dragView_a = findViewById(R.id.letter_a);
-        dragView_a.setOnTouchListener(new MyTouchListener());
-
+        letterA = (ImageButton) findViewById(R.id.letter_a);
+        letterB = (ImageButton) findViewById(R.id.letter_b);
         letterN = (ImageButton) findViewById(R.id.letter_n);
         letterO = (ImageButton) findViewById(R.id.letter_o);
+        letterA.setOnClickListener(new MyClickListener());
+        letterB.setOnClickListener(new MyClickListener());
         letterN.setOnClickListener(new MyClickListener());
         letterO.setOnClickListener(new MyClickListener());
     }
