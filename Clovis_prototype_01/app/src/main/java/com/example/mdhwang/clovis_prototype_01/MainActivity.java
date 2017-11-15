@@ -1,9 +1,11 @@
 package com.example.mdhwang.clovis_prototype_01;
 
 import android.content.Intent;
+import android.graphics.Rect;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity{
             letterU, letterV, letterW, letterX,
             letterY, letterZ;
 
+    ImageView trashCan;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,9 +90,7 @@ public class MainActivity extends AppCompatActivity{
         letterX = (ImageButton) findViewById(R.id.letter_x);
         letterY = (ImageButton) findViewById(R.id.letter_y);
         letterZ = (ImageButton) findViewById(R.id.letter_z);
-
-
-
+        trashCan = (ImageView) findViewById(R.id.trash);
 
         letterA.setOnClickListener(new MyClickListener());
         letterB.setOnClickListener(new MyClickListener());
@@ -115,6 +118,8 @@ public class MainActivity extends AppCompatActivity{
         letterX.setOnClickListener(new MyClickListener());
         letterY.setOnClickListener(new MyClickListener());
         letterZ.setOnClickListener(new MyClickListener());
+
+
 
     }
 
@@ -249,6 +254,7 @@ public class MainActivity extends AppCompatActivity{
                     lastAction = MotionEvent.ACTION_DOWN;
                     mp2.start();
                     view.invalidate();
+                    break;
 
                 case MotionEvent.ACTION_MOVE:
                     newX = event.getRawY() + dY;
@@ -262,8 +268,10 @@ public class MainActivity extends AppCompatActivity{
                     lastAction = MotionEvent.ACTION_MOVE;
                     mp2.start();
                     view.invalidate();
+                    break;
 
                 case MotionEvent.ACTION_UP:
+                    Log.d("Action",String.valueOf(event.getActionMasked()));
                     break;
                 case MotionEvent.ACTION_POINTER_DOWN:
                     break;
