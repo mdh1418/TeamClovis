@@ -31,6 +31,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.media.MediaPlayer;
 import android.content.Context;
+import android.util.DisplayMetrics;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity{
     MediaPlayer mp1, mp2, mp3;
     float dX;
     float dY;
+    float newX;
+    float newY;
     int lastAction;
 
     ImageButton letterA, letterB, letterC, letterD,
@@ -235,6 +238,10 @@ public class MainActivity extends AppCompatActivity{
     }
     private final class MyTouchListener implements OnTouchListener{
         public boolean onTouch(View view, MotionEvent event) {
+            DisplayMetrics displaymetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+            int height = displaymetrics.heightPixels;
+            int width = displaymetrics.widthPixels;
             switch (event.getActionMasked()) {
                 case MotionEvent.ACTION_DOWN:
                     dX = view.getX() - event.getRawX();
@@ -244,6 +251,12 @@ public class MainActivity extends AppCompatActivity{
                     view.invalidate();
 
                 case MotionEvent.ACTION_MOVE:
+                    newX = event.getRawY() + dY;
+                    newY = event.getRawX() + dX;
+
+                    if ((newX <= 0 || newX >= width + 0.3*view.getWidth()) ||
+                            (newY <= 0 || newY >= height + 0.3*view.getHeight()))
+                        break;
                     view.setY(event.getRawY() + dY);
                     view.setX(event.getRawX() + dX);
                     lastAction = MotionEvent.ACTION_MOVE;

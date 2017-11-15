@@ -22,8 +22,6 @@
             android:background="@null"
             android:src="@drawable/trash"
             />
-
-
     </RelativeLayout>
 
     <ScrollView
