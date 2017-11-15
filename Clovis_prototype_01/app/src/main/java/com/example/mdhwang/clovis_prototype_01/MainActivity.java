@@ -247,6 +247,7 @@ public class MainActivity extends AppCompatActivity{
             getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
             int height = displaymetrics.heightPixels;
             int width = displaymetrics.widthPixels;
+            float x_left, y_top, x_right, y_bottom;
             switch (event.getActionMasked()) {
                 case MotionEvent.ACTION_DOWN:
                     dX = view.getX() - event.getRawX();
@@ -271,7 +272,23 @@ public class MainActivity extends AppCompatActivity{
                     break;
 
                 case MotionEvent.ACTION_UP:
-                    Log.d("Action",String.valueOf(event.getActionMasked()));
+                    x_left = view.getX();
+                    y_top = view.getY();
+                    x_right = x_left + view.getWidth();
+                    y_bottom = y_top + view.getHeight();
+                    if (x_left > trashCan.getX() &&
+                            x_left < trashCan.getX() + trashCan.getWidth() &&
+                            y_top > trashCan.getY() &&
+                            y_top < trashCan.getY() + trashCan.getHeight()
+                            ||
+                            x_right > trashCan.getX() &&
+                            x_right < trashCan.getX() + trashCan.getWidth() &&
+                            y_bottom > trashCan.getY() &&
+                            y_bottom < trashCan.getY() + trashCan.getHeight()){
+                        RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.paper);
+                        myLayout.removeView(view);
+                    }
+//                    Log.d("Action",String.valueOf(event.getActionMasked()));
                     break;
                 case MotionEvent.ACTION_POINTER_DOWN:
                     break;
