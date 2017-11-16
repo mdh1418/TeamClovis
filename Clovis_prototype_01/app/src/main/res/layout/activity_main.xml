@@ -170,6 +170,12 @@
             android:padding="10dp"
             android:paddingRight="50dp">
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="startVersionOne"
+                android:text="@string/version_one" />
+
             <ImageButton
                 android:id="@+id/letter_n"
                 android:layout_width="match_parent"

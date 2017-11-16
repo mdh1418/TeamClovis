@@ -1,44 +1,19 @@
 package com.example.mdhwang.clovis_prototype_01;
 
-import android.content.Intent;
+import android.content.Context;
 import android.graphics.Rect;
-import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
+import android.view.View.OnTouchListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.Toast;
-import android.app.Activity;
-import android.content.ClipData;
-import android.graphics.drawable.Drawable;
-import android.os.Bundle;
-import android.view.DragEvent;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.DragShadowBuilder;
-import android.view.View.OnDragListener;
-import android.view.View.OnTouchListener;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.media.MediaPlayer;
-import android.content.Context;
-import android.util.DisplayMetrics;
 
-import junit.runner.Version;
-
-
-public class MainActivity extends AppCompatActivity{
+public class VersionOne extends AppCompatActivity {
     Context context = this;
     MediaPlayer mp1, mp2, mp3;
     float dX;
@@ -48,9 +23,9 @@ public class MainActivity extends AppCompatActivity{
     int lastAction;
 
     ImageButton letterA, letterB, letterC, letterD,
-                letterE, letterF, letterG, letterH,
-                letterI, letterJ, letterK, letterL,
-                letterM, letterN, letterO, letterP,
+            letterE, letterF, letterG, letterH,
+            letterI, letterJ, letterK, letterL,
+            letterM, letterN, letterO, letterP,
             letterQ, letterR, letterS, letterT,
             letterU, letterV, letterW, letterX,
             letterY, letterZ;
@@ -61,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_version_one);
         mp1 = MediaPlayer.create(context, R.raw.ripping_1);
         mp2 = MediaPlayer.create(context, R.raw.ripping_2);
         mp3 = MediaPlayer.create(context, R.raw.ripping_3);
@@ -123,14 +98,9 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
-    public void startVersionOne(View view){
-        Intent intent = new Intent(this, VersionOne.class);
-        startActivity(intent);
-    }
-
-    private final class MyClickListener implements OnClickListener{
+    private final class MyClickListener implements View.OnClickListener {
         public void onClick(View view){
-            ImageView image = new ImageView(MainActivity.this);
+            ImageView image = new ImageView(VersionOne.this);
             RelativeLayout mylayout = (RelativeLayout) findViewById(R.id.paper);
             switch (view.getId()){
                 case R.id.letter_a:
@@ -306,4 +276,3 @@ public class MainActivity extends AppCompatActivity{
     }
 
 }
-
