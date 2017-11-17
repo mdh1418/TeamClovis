@@ -21,6 +21,21 @@ public class VersionThree extends AppCompatActivity{
     private HorizontalScrollView hsv;
     int currentScrollX = 0;
 
+    float dX;
+    float dY;
+    float newX;
+    float newY;
+    int lastAction;
+
+    ImageView trashCan; letterA, letterB, letterC, letterD,
+    letterE, letterF, letterG, letterH,
+    letterI, letterJ, letterK, letterL,
+    letterM, letterN, letterO, letterP,
+    letterQ, letterR, letterS, letterT,
+    letterU, letterV, letterW, letterX,
+    letterY, letterZ;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

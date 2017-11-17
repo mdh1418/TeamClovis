@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 
 public class VersionOne extends AppCompatActivity {
     Context context = this;
-    MediaPlayer mp1, mp2, mp3;
+    MediaPlayer mp1, mp2, mp3, water, zip;
     float dX;
     float dY;
     float newX;
@@ -40,6 +40,8 @@ public class VersionOne extends AppCompatActivity {
         mp1 = MediaPlayer.create(context, R.raw.ripping_1);
         mp2 = MediaPlayer.create(context, R.raw.ripping_2);
         mp3 = MediaPlayer.create(context, R.raw.ripping_3);
+        water = MediaPlayer.create(context, R.raw.water);
+        zip = MediaPlayer.create(context, R.raw.zipper);
 
         letterA = (ImageButton) findViewById(R.id.letter_a);
         letterB = (ImageButton) findViewById(R.id.letter_b);
@@ -105,7 +107,7 @@ public class VersionOne extends AppCompatActivity {
             switch (view.getId()){
                 case R.id.letter_a:
                     image.setBackgroundResource(R.drawable.letter_a);
-                    mp1.start();
+                    water.start();
                     break;
                 case R.id.letter_b:
                     image.setBackgroundResource(R.drawable.letter_b);
@@ -121,7 +123,7 @@ public class VersionOne extends AppCompatActivity {
                     break;
                 case R.id.letter_e:
                     image.setBackgroundResource(R.drawable.letter_e);
-                    mp1.start();
+                    water.start();
                     break;
                 case R.id.letter_f:
                     image.setBackgroundResource(R.drawable.letter_f);
@@ -137,7 +139,7 @@ public class VersionOne extends AppCompatActivity {
                     break;
                 case R.id.letter_i:
                     image.setBackgroundResource(R.drawable.letter_i);
-                    mp1.start();
+                    water.start();
                     break;
                 case R.id.letter_j:
                     image.setBackgroundResource(R.drawable.letter_j);
@@ -161,7 +163,7 @@ public class VersionOne extends AppCompatActivity {
                     break;
                 case R.id.letter_o:
                     image.setBackgroundResource(R.drawable.letter_o);
-                    mp3.start();
+                    water.start();
                     break;
                 case R.id.letter_p:
                     image.setBackgroundResource(R.drawable.letter_p);
@@ -185,7 +187,7 @@ public class VersionOne extends AppCompatActivity {
                     break;
                 case R.id.letter_u:
                     image.setBackgroundResource(R.drawable.letter_u);
-                    mp3.start();
+                    water.start();
                     break;
                 case R.id.letter_v:
                     image.setBackgroundResource(R.drawable.letter_v);
@@ -263,6 +265,7 @@ public class VersionOne extends AppCompatActivity {
                 case MotionEvent.ACTION_UP:
                     if (Rect.intersects(letterRect, trashRect)){
                         RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.paper);
+                        zip.start();
                         myLayout.removeView(view);
                     }
                     break;
