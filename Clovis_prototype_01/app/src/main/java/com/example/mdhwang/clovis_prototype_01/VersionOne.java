@@ -250,16 +250,15 @@ public class VersionOne extends AppCompatActivity {
                 case MotionEvent.ACTION_MOVE:
                     newX = event.getRawX() + dX;
                     newY = event.getRawY() + dY;
-                    if (newX >= paper_x &&
-                            newY >= paper_y &&
-                            (newX + view_width) <= (paper_x + paper_width) &&
-                            (newY + view_height) <= (paper_y + paper_height)){
-                        view.setY(event.getRawY() + dY);
+                    if (newX >= paper_x && (newX + view_width) <= (paper_x + paper_width)){
                         view.setX(event.getRawX() + dX);
-                        lastAction = MotionEvent.ACTION_MOVE;
-                        mp2.start();
-                        view.invalidate();
                     }
+                    if (newY >= paper_y && (newY + view_height) <= (paper_y + paper_height)){
+                        view.setY(event.getRawY() + dY);
+                    }
+                    lastAction = MotionEvent.ACTION_MOVE;
+                    mp2.start();
+                    view.invalidate();
                     break;
 
                 case MotionEvent.ACTION_UP:
