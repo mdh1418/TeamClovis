@@ -1,16 +1,54 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="4"
-    android:padding="5dp" android:baselineAligned="false">
-
+    android:layout_height="match_parent">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/One"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="275dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="275dp"
         android:layout_weight="1"
         android:onClick="startVersionOne"
-        android:text="@string/version_one" />
+        android:text="@string/version_one"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/Two"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="275dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="275dp"
+        android:onClick="startVersionTwo"
+        android:text="@string/version_two"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/One"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:weightSum="4"-->
+    <!--android:padding="5dp" android:baselineAligned="false">-->
+
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:onClick="startVersionOne"-->
+        <!--android:text="@string/version_one" />-->
+
+<!--</LinearLayout>-->

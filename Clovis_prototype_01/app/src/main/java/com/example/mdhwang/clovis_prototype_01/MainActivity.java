@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity{
         Intent intent = new Intent(this, VersionOne.class);
         startActivity(intent);
     }
+    public void startVersionTwo(View view){
+        Intent intent = new Intent(this, VersionTwo.class);
+        startActivity(intent);
+    }
 
 
 }

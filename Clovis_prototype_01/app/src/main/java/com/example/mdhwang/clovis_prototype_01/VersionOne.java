@@ -218,14 +218,26 @@ public class VersionOne extends AppCompatActivity {
     }
     private final class MyTouchListener implements OnTouchListener{
         public boolean onTouch(View view, MotionEvent event) {
-            DisplayMetrics displaymetrics = new DisplayMetrics();
-            getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-            int height = displaymetrics.heightPixels;
-            int width = displaymetrics.widthPixels;
+            RelativeLayout paper_layout = (RelativeLayout) findViewById(R.id.paper);
+            int paper_x = (int) paper_layout.getX();
+            int paper_y = (int) paper_layout.getY();
+            int paper_width = paper_layout.getWidth();
+            int paper_height = paper_layout.getHeight();
             int view_x, view_y, view_width, view_height;
+            view_x = (int)view.getX();
+            view_y = (int)view.getY();
+            view_width = view.getWidth();
+            view_height = view.getHeight();
+            Rect letterRect = new Rect(view_x, view_y, view_x + view_width, view_y + view_height);
             int trash_x, trash_y, trash_width, trash_height;
+            trash_x = (int)trashCan.getX();
+            trash_y = (int)trashCan.getY();
+            trash_width = trashCan.getWidth();
+            trash_height = trashCan.getHeight();
+            Rect trashRect = new Rect(trash_x, trash_y, trash_x + trash_width, trash_y + trash_height);
             switch (event.getActionMasked()) {
                 case MotionEvent.ACTION_DOWN:
+                    // Keep relative distance between pointer and imageview
                     dX = view.getX() - event.getRawX();
                     dY = view.getY() - event.getRawY();
                     lastAction = MotionEvent.ACTION_DOWN;
@@ -234,40 +246,26 @@ public class VersionOne extends AppCompatActivity {
                     break;
 
                 case MotionEvent.ACTION_MOVE:
-                    newX = event.getRawY() + dY;
-                    newY = event.getRawX() + dX;
-
-                    if ((newX <= 0 || newX >= width + 0.3*view.getWidth()) ||
-                            (newY <= 0 || newY >= height + 0.3*view.getHeight()))
-                        break;
-                    view.setY(event.getRawY() + dY);
-                    view.setX(event.getRawX() + dX);
-                    lastAction = MotionEvent.ACTION_MOVE;
-                    mp2.start();
-                    view.invalidate();
+                    newX = event.getRawX() + dX;
+                    newY = event.getRawY() + dY;
+                    if (newX >= paper_x &&
+                            newY >= paper_y &&
+                            (newX + view_width) <= (paper_x + paper_width) &&
+                            (newY + view_height) <= (paper_y + paper_height)){
+                        view.setY(event.getRawY() + dY);
+                        view.setX(event.getRawX() + dX);
+                        lastAction = MotionEvent.ACTION_MOVE;
+                        mp2.start();
+                        view.invalidate();
+                    }
                     break;
 
                 case MotionEvent.ACTION_UP:
-                    view_x = (int)view.getX();
-                    view_y = (int)view.getY();
-                    view_width = view.getWidth();
-                    view_height = view.getHeight();
-                    Rect letterRect = new Rect(view_x, view_y, view_x + view_width, view_y + view_height);
-                    trash_x = (int)trashCan.getX();
-                    trash_y = (int)trashCan.getY();
-                    trash_width = trashCan.getWidth();
-                    trash_height = trashCan.getHeight();
-                    Rect trashRect = new Rect(trash_x, trash_y, trash_x + trash_width, trash_y + trash_height);
                     if (Rect.intersects(letterRect, trashRect)){
                         RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.paper);
                         myLayout.removeView(view);
                     }
                     break;
-                case MotionEvent.ACTION_POINTER_DOWN:
-                    break;
-                case MotionEvent.ACTION_POINTER_UP:
-                    break;
-
                 default:
                     return false;
             }
