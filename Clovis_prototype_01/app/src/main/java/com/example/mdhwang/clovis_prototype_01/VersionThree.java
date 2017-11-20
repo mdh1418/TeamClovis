@@ -53,6 +53,7 @@ public class VersionThree extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 hsv.scrollTo((int)hsv.getScrollX() - 120, (int)hsv.getScrollY());
+
             }
         });
         rightBtn.setOnClickListener(new View.OnClickListener() {
