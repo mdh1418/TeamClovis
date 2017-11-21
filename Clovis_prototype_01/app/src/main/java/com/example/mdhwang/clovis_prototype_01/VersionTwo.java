@@ -1,3 +1,5 @@
+//One Scroll Bar
+
 package com.example.mdhwang.clovis_prototype_01;
 
 import android.content.Context;
@@ -33,7 +35,6 @@ public class VersionTwo extends AppCompatActivity {
 
     ImageView trashCan;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,7 @@ public class VersionTwo extends AppCompatActivity {
         mp3 = MediaPlayer.create(context, R.raw.ripping_3);
         water = MediaPlayer.create(context, R.raw.water);
         zip = MediaPlayer.create(context, R.raw.zipper);
+
 
         letterA = (ImageButton) findViewById(R.id.letter_a);
         letterB = (ImageButton) findViewById(R.id.letter_b);

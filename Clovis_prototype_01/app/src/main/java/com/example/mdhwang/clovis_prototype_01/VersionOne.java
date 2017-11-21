@@ -1,3 +1,4 @@
+//Two Scroll Bars
 package com.example.mdhwang.clovis_prototype_01;
 
 import android.content.Context;
@@ -31,6 +32,15 @@ public class VersionOne extends AppCompatActivity {
             letterY, letterZ;
 
     ImageView trashCan;
+
+    private String currentWord;
+
+    public String getSomeVariable() {
+        return currentWord;
+    }
+    public void setSomeVariable(String currentWord) {
+        this.currentWord = currentWord;
+    }
 
 
     @Override
