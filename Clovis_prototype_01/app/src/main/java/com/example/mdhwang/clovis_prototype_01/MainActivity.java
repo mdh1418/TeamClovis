@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+    public void startVersionGIFS (View view){
+        Intent intent = new Intent(this, VersionGIFS.class);
+        startActivity(intent);
+    }
+
 
 }
 
