@@ -136,90 +136,112 @@ public class VersionGIFS extends AppCompatActivity {
                     mp1.start();
                     break;
                 case R.id.letter_e:
+                    image.startAnimation(animRotate);
                     image.setBackgroundResource(R.drawable.letter_e);
                     water.start();
                     break;
                 case R.id.letter_f:
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_f);
                     mp1.start();
                     break;
                 case R.id.letter_g:
+                    image.startAnimation(animPushUp);
                     image.setBackgroundResource(R.drawable.letter_g);
                     mp1.start();
                     break;
                 case R.id.letter_h:
+                    image.startAnimation(animSlide);
                     image.setBackgroundResource(R.drawable.letter_h);
                     mp1.start();
                     break;
                 case R.id.letter_i:
+                    image.startAnimation(animRotate);
                     image.setBackgroundResource(R.drawable.letter_i);
                     water.start();
                     break;
                 case R.id.letter_j:
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_j);
                     mp1.start();
                     break;
                 case R.id.letter_k:
+                    image.startAnimation(animPushUp);
                     image.setBackgroundResource(R.drawable.letter_k);
                     mp1.start();
                     break;
                 case R.id.letter_l:
+                    image.startAnimation(animSlide);
                     image.setBackgroundResource(R.drawable.letter_l);
                     mp1.start();
                     break;
                 case R.id.letter_m:
+                    image.startAnimation(animRotate);
                     image.setBackgroundResource(R.drawable.letter_m);
                     mp1.start();
                     break;
                 case R.id.letter_n:
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_n);
                     mp3.start();
                     break;
                 case R.id.letter_o:
+                    image.startAnimation(animPushUp);
                     image.setBackgroundResource(R.drawable.letter_o);
                     water.start();
                     break;
                 case R.id.letter_p:
+                    image.startAnimation(animSlide);
                     image.setBackgroundResource(R.drawable.letter_p);
                     mp3.start();
                     break;
                 case R.id.letter_q:
+                    image.startAnimation(animRotate);
                     image.setBackgroundResource(R.drawable.letter_q);
                     mp3.start();
                     break;
                 case R.id.letter_r:
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_r);
                     mp3.start();
                     break;
                 case R.id.letter_s:
+                    image.startAnimation(animPushUp);
                     image.setBackgroundResource(R.drawable.letter_s);
                     mp3.start();
                     break;
                 case R.id.letter_t:
+                    image.startAnimation(animSlide);
                     image.setBackgroundResource(R.drawable.letter_t);
                     mp3.start();
                     break;
                 case R.id.letter_u:
+                    image.startAnimation(animRotate);
                     image.setBackgroundResource(R.drawable.letter_u);
                     water.start();
                     break;
                 case R.id.letter_v:
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_v);
                     mp3.start();
                     break;
                 case R.id.letter_w:
+                    image.startAnimation(animPushUp);
                     image.setBackgroundResource(R.drawable.letter_w);
                     mp3.start();
                     break;
                 case R.id.letter_x:
+                    image.startAnimation(animRotate);
                     image.setBackgroundResource(R.drawable.letter_x);
                     mp3.start();
                     break;
                 case R.id.letter_y:
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_y);
                     mp3.start();
                     break;
                 case R.id.letter_z:
+                    image.startAnimation(animSlide);
                     image.setBackgroundResource(R.drawable.letter_z);
                     mp3.start();
                     break;
