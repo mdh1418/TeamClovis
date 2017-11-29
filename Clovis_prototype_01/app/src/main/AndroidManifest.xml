@@ -53,7 +53,11 @@
         </activity>
         <activity
             android:name=".VersionGIFS"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
     </application>
 
