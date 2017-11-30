@@ -1,5 +1,6 @@
 package com.example.mdhwang.clovis_prototype_01;
 
+import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,6 +30,7 @@ public class VersionThree extends AppCompatActivity{
 
     ImageView first, second, third, fourth, fifth, sixth, seventh, eighth;
 
+//    ImageView trashCan;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,7 @@ public class VersionThree extends AppCompatActivity{
         sixth = (ImageView) findViewById(R.id.sixth);
         seventh = (ImageView) findViewById(R.id.seventh);
         eighth = (ImageView) findViewById(R.id.eighth);
+//        trashCan = (ImageView) findViewById(R.id.trash);
 
         lettersList[0] = first;
         lettersList[1] = second;
@@ -262,6 +265,13 @@ public class VersionThree extends AppCompatActivity{
             view_y = (int)view.getY();
             view_width = view.getWidth();
             view_height = view.getHeight();
+            Rect letterRect = new Rect(view_x, view_y, view_x + view_width, view_y + view_height);
+//            int trash_x, trash_y, trash_width, trash_height;
+//            trash_x = (int)trashCan.getX();
+//            trash_y = (int)trashCan.getY();
+//            trash_width = trashCan.getWidth();
+//            trash_height = trashCan.getHeight();
+//            Rect trashRect = new Rect(trash_x, trash_y, trash_x + trash_width, trash_y + trash_height);
             switch (event.getActionMasked()) {
                 case MotionEvent.ACTION_DOWN:
                     if (view.getTag() != "") {
@@ -406,9 +416,13 @@ public class VersionThree extends AppCompatActivity{
                         view.setY(event.getRawY() + dY);
                     }
                     view.invalidate();
-                break;
+                    break;
 
                 case MotionEvent.ACTION_UP:
+//                    if (Rect.intersects(letterRect, trashRect)){
+//                        RelativeLayout myLayout = (RelativeLayout) findViewById(R.id.paper);
+//                        myLayout.removeView(view);
+//                    }
                     break;
                 default:
                     return false;
