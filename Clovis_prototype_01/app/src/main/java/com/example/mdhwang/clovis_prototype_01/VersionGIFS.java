@@ -171,7 +171,7 @@ public class VersionGIFS extends AppCompatActivity {
                     mp1.start();
                     break;
                 case R.id.letter_l:
-                    image.startAnimation(animSlide);
+                    image.startAnimation(animBounce);
                     image.setBackgroundResource(R.drawable.letter_l);
                     mp1.start();
                     break;
