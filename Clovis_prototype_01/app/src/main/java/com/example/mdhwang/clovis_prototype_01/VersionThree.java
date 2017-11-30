@@ -136,6 +136,30 @@ public class VersionThree extends AppCompatActivity{
                     } else if (thisTag == "X"){
                         lettersList[i].setImageResource(R.drawable.letter_p);
                         lettersList[i].setTag("P");
+                    } else if (thisTag == "Y"){
+                        lettersList[i].setImageResource(R.drawable.letter_q);
+                        lettersList[i].setTag("Q");
+                    } else if (thisTag == "Z"){
+                        lettersList[i].setImageResource(R.drawable.letter_r);
+                        lettersList[i].setTag("R");
+                    } else if (thisTag == "."){
+                        lettersList[i].setImageResource(R.drawable.letter_s);
+                        lettersList[i].setTag("S");
+                    } else if (thisTag == "!"){
+                        lettersList[i].setImageResource(R.drawable.letter_t);
+                        lettersList[i].setTag("T");
+                    } else if (thisTag == "?"){
+                        lettersList[i].setImageResource(R.drawable.letter_u);
+                        lettersList[i].setTag("U");
+                    } else if (thisTag == "'"){
+                        lettersList[i].setImageResource(R.drawable.letter_v);
+                        lettersList[i].setTag("V");
+                    } else if (thisTag == "-"){
+                        lettersList[i].setImageResource(R.drawable.letter_w);
+                        lettersList[i].setTag("W");
+                    } else if (thisTag == "~"){
+                        lettersList[i].setImageResource(R.drawable.letter_x);
+                        lettersList[i].setTag("X");
                     }
                 }
             }
@@ -195,6 +219,30 @@ public class VersionThree extends AppCompatActivity{
                     } else if (thisTag == "P"){
                         lettersList[i].setImageResource(R.drawable.letter_x);
                         lettersList[i].setTag("X");
+                    } else if (thisTag == "Q"){
+                        lettersList[i].setImageResource(R.drawable.letter_y);
+                        lettersList[i].setTag("Y");
+                    } else if (thisTag == "R"){
+                        lettersList[i].setImageResource(R.drawable.letter_z);
+                        lettersList[i].setTag("Z");
+                    } else if (thisTag == "S"){
+                        lettersList[i].setImageResource(R.drawable.letter_a);
+                        lettersList[i].setTag(".");
+                    } else if (thisTag == "T"){
+                        lettersList[i].setImageResource(R.drawable.letter_b);
+                        lettersList[i].setTag("!");
+                    } else if (thisTag == "U"){
+                        lettersList[i].setImageResource(R.drawable.letter_c);
+                        lettersList[i].setTag("?");
+                    } else if (thisTag == "V"){
+                        lettersList[i].setImageResource(R.drawable.letter_d);
+                        lettersList[i].setTag("'");
+                    } else if (thisTag == "W"){
+                        lettersList[i].setImageResource(R.drawable.letter_e);
+                        lettersList[i].setTag("-");
+                    } else if (thisTag == "X"){
+                        lettersList[i].setImageResource(R.drawable.letter_f);
+                        lettersList[i].setTag("~");
                     }
                 }
             }
@@ -291,6 +339,30 @@ public class VersionThree extends AppCompatActivity{
                         } else if (view.getTag() == "X") {
                             image.setImageResource(R.drawable.letter_x);
                             image.setTag("X");
+                        } else if (view.getTag() == "Y") {
+                            image.setImageResource(R.drawable.letter_y);
+                            image.setTag("Y");
+                        } else if (view.getTag() == "Z") {
+                            image.setImageResource(R.drawable.letter_z);
+                            image.setTag("Z");
+                        } else if (view.getTag() == ".") {
+                            image.setImageResource(R.drawable.letter_a);
+                            image.setTag(".");
+                        } else if (view.getTag() == "!") {
+                            image.setImageResource(R.drawable.letter_b);
+                            image.setTag("!");
+                        } else if (view.getTag() == "?") {
+                            image.setImageResource(R.drawable.letter_c);
+                            image.setTag("?");
+                        } else if (view.getTag() == "'") {
+                            image.setImageResource(R.drawable.letter_d);
+                            image.setTag("'");
+                        } else if (view.getTag() == "-") {
+                            image.setImageResource(R.drawable.letter_e);
+                            image.setTag("-");
+                        } else if (view.getTag() == "~") {
+                            image.setImageResource(R.drawable.letter_f);
+                            image.setTag("~");
                         }
                         mylayout.addView(image);
                         image.setX(view_x);
@@ -298,21 +370,21 @@ public class VersionThree extends AppCompatActivity{
                         image.getLayoutParams().width = 130;
                         image.getLayoutParams().height = 140;
                         image.setOnTouchListener(new MyTouchListener());
-                        if (view.getTag() == "A" || view.getTag() == "I" || view.getTag() == "Q"){
+                        if (view.getTag() == "A" || view.getTag() == "I" || view.getTag() == "Q" || view.getTag() == "Y"){
                             lettersList[0] = image;
-                        } else if (view.getTag() == "B" || view.getTag() == "J" || view.getTag() == "R"){
+                        } else if (view.getTag() == "B" || view.getTag() == "J" || view.getTag() == "R" || view.getTag() == "Z"){
                             lettersList[1] = image;
-                        } else if (view.getTag() == "C" || view.getTag() == "K" || view.getTag() == "S"){
+                        } else if (view.getTag() == "C" || view.getTag() == "K" || view.getTag() == "S" || view.getTag() == "."){
                             lettersList[2] = image;
-                        } else if (view.getTag() == "D" || view.getTag() == "L" || view.getTag() == "T"){
+                        } else if (view.getTag() == "D" || view.getTag() == "L" || view.getTag() == "T" || view.getTag() == "!"){
                             lettersList[3] = image;
-                        } else if (view.getTag() == "E" || view.getTag() == "M" || view.getTag() == "U"){
+                        } else if (view.getTag() == "E" || view.getTag() == "M" || view.getTag() == "U" || view.getTag() == "?"){
                             lettersList[4] = image;
-                        } else if (view.getTag() == "F" || view.getTag() == "N" || view.getTag() == "V"){
+                        } else if (view.getTag() == "F" || view.getTag() == "N" || view.getTag() == "V" || view.getTag() == "'"){
                             lettersList[5] = image;
-                        } else if (view.getTag() == "G" || view.getTag() == "O" || view.getTag() == "W"){
+                        } else if (view.getTag() == "G" || view.getTag() == "O" || view.getTag() == "W" || view.getTag() == "-"){
                             lettersList[6] = image;
-                        } else if (view.getTag() == "H" || view.getTag() == "P" || view.getTag() == "X"){
+                        } else if (view.getTag() == "H" || view.getTag() == "P" || view.getTag() == "X" || view.getTag() == "~"){
                             lettersList[7] = image;
                         }
                     }
