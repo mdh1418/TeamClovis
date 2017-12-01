@@ -3,4 +3,17 @@
     <string name="version_one">Two Scrollbars</string>
     <string name="version_two">One Scrollbar</string>
     <string name="version_three">Arrow scrolling</string>
+    <string name="btn_left">Button to scroll letters left</string>
+    <string name="btn_right">Button to scroll letters right</string>
+    <string name="first">Leftmost letter in scrollbar</string>
+    <string name="second">second letter in scrollbar</string>
+    <string name="third">third letter in scrollbar</string>
+    <string name="fourth">fourth letter in scrollbar</string>
+    <string name="fifth">fifth letter in scrollbar</string>
+    <string name="sixth">sixth letter in scrollbar</string>
+    <string name="seventh">seventh letter in scrollbar</string>
+    <string name="eighth">rightmost letter in scrollbar</string>
+    <string name="trash">Trashcan for imageview removal</string>
+    <string name="dragging">Dragging</string>
 </resources>
+

@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
+    public void startDragging (View view){
+        Intent intent = new Intent(this, Dragging.class);
+        startActivity(intent);
+    }
+
 
 }
 

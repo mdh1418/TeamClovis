@@ -11,8 +11,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape"
-            android:configChanges="keyboardHidden">
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,6 +53,13 @@
         </activity>
         <activity
             android:name=".VersionGIFS"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity android:name=".Dragging"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="landscape">
             <meta-data
