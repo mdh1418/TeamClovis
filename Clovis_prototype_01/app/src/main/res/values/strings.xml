@@ -15,5 +15,6 @@
     <string name="eighth">rightmost letter in scrollbar</string>
     <string name="trash">Trashcan for imageview removal</string>
     <string name="dragging">Dragging</string>
+    <string name="clear_screen">Clear</string>
 </resources>
 

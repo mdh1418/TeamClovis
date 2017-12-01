@@ -24,6 +24,8 @@ public class Dragging extends AppCompatActivity {
     private int ImageValueStart = 0x7f060056; // Drawable start index
     private ImageView[] lettersList = new ImageView[8];
     private int[] letterIdStart = {0x7f070035, 0x7f07007d, 0x7f070094, 0x7f070036, 0x7f070034, 0x7f070084, 0x7f07007f, 0x7f07002f};
+    private ImageView[] lettersOnScreen = new ImageView[128];
+    private int letterCount = 0;
 
     MediaPlayer mp1, mp2, mp3, water, zip;
     float dX;
@@ -58,6 +60,13 @@ public class Dragging extends AppCompatActivity {
         mp3 = MediaPlayer.create(this, R.raw.ripping_3);
         water = MediaPlayer.create(this, R.raw.water);
         zip = MediaPlayer.create(this, R.raw.zipper);
+    }
+
+    public void clearScreen(View view){
+        ConstraintLayout screen = (ConstraintLayout) findViewById(R.id.paper);
+        for (int i = 0; i < letterCount; i++){
+            screen.removeView(lettersOnScreen[i]);
+        }
     }
 
     @Override
@@ -407,6 +416,8 @@ public class Dragging extends AppCompatActivity {
                             image.setImageResource(R.drawable.letter_f);
                             image.setTag("~");
                         }
+                        lettersOnScreen[letterCount] = (ImageView) view;
+                        letterCount++;
                         mylayout.addView(image);
                         image.setX(view_x);
                         image.setY(view_y);
