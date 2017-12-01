@@ -21,8 +21,9 @@ public class Dragging extends AppCompatActivity {
     private ImageButton leftBtn, rightBtn;
     private HashMap<Character, Integer> ImageDict = new HashMap<Character, Integer>();
     private char[] ImageKeys = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-    private int ImageValueStart = 0x7f060056;
+    private int ImageValueStart = 0x7f060056; // Drawable start index
     private ImageView[] lettersList = new ImageView[8];
+    private int[] letterIdStart = {0x7f070035, 0x7f07007d, 0x7f070094, 0x7f070036, 0x7f070034, 0x7f070084, 0x7f07007f, 0x7f07002f};
 
     MediaPlayer mp1, mp2, mp3, water, zip;
     float dX;
@@ -31,7 +32,7 @@ public class Dragging extends AppCompatActivity {
     float newY;
 
     ImageView first, second, third, fourth, fifth, sixth, seventh, eighth, trashCan;
-
+    // IDs: 0x7f07 0035, 007d, 0094, 0036, 0034, 0084, 007f, 002f, 009b
     private void initializeDict(HashMap<Character, Integer> myDict, char[] myKeys, int myVals){
         for (int i = 0; i < myKeys.length; i++){
             Log.d("Key: ", Character.toString(myKeys[i]));
@@ -41,8 +42,22 @@ public class Dragging extends AppCompatActivity {
         }
     }
 
-    private void initializeBar(ImageView[] myBar){
+    private void initializeBar(ImageView[] myBar, int[] myVals){
+        if (myBar.length >= myVals.length) {
+            for (int i = 0; i < myBar.length; i++) {
+                myBar[i] = (ImageView) findViewById(myVals[i]);
+            }
+        } else{
 
+        }
+    }
+
+    private void initializeSounds(){
+        mp1 = MediaPlayer.create(this, R.raw.ripping_1);
+        mp2 = MediaPlayer.create(this, R.raw.ripping_2);
+        mp3 = MediaPlayer.create(this, R.raw.ripping_3);
+        water = MediaPlayer.create(this, R.raw.water);
+        zip = MediaPlayer.create(this, R.raw.zipper);
     }
 
     @Override
@@ -51,12 +66,8 @@ public class Dragging extends AppCompatActivity {
         setContentView(R.layout.activity_dragging);
         initializeDict(ImageDict, ImageKeys, ImageValueStart);
         Log.d("ImageDict", ImageDict.toString());
-
-        mp1 = MediaPlayer.create(this, R.raw.ripping_1);
-        mp2 = MediaPlayer.create(this, R.raw.ripping_2);
-        mp3 = MediaPlayer.create(this, R.raw.ripping_3);
-        water = MediaPlayer.create(this, R.raw.water);
-        zip = MediaPlayer.create(this, R.raw.zipper);
+//        initializeBar(lettersList, letterIdStart);
+        initializeSounds();
 
         leftBtn = (ImageButton) findViewById(R.id.btn_left);
         rightBtn = (ImageButton) findViewById(R.id.btn_right);
@@ -78,7 +89,6 @@ public class Dragging extends AppCompatActivity {
         lettersList[5] = sixth;
         lettersList[6] = seventh;
         lettersList[7] = eighth;
-
         first = (ImageView) findViewById(R.id.first);
         first.setTag("A");
         first.setOnTouchListener(new MyTouchListener());
