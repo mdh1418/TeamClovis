@@ -37,8 +37,8 @@ public class Dragging extends AppCompatActivity {
     // IDs: 0x7f07 0035, 007d, 0094, 0036, 0034, 0084, 007f, 002f, 009b
     private void initializeDict(HashMap<Character, Integer> myDict, char[] myKeys, int myVals){
         for (int i = 0; i < myKeys.length; i++){
-            Log.d("Key: ", Character.toString(myKeys[i]));
-            Log.d("Value: ", Integer.toString(myVals));
+//            Log.d("Key: ", Character.toString(myKeys[i]));
+//            Log.d("Value: ", Integer.toString(myVals));
             myDict.put(myKeys[i],myVals);
             myVals++;
         }
@@ -74,7 +74,7 @@ public class Dragging extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dragging);
         initializeDict(ImageDict, ImageKeys, ImageValueStart);
-        Log.d("ImageDict", ImageDict.toString());
+//        Log.d("ImageDict", ImageDict.toString());
 //        initializeBar(lettersList, letterIdStart);
         initializeSounds();
 
