@@ -83,7 +83,6 @@ public class Dragging extends AppCompatActivity {
         paper = (ConstraintLayout) findViewById(R.id.paper);
 
         leftBtn = (ImageButton) findViewById(R.id.btn_left);
-
         rightBtn = (ImageButton) findViewById(R.id.btn_right);
         first = (ImageView) findViewById(R.id.first);
         second = (ImageView) findViewById(R.id.second);
@@ -274,22 +273,22 @@ public class Dragging extends AppCompatActivity {
                         lettersList[i].setImageResource(R.drawable.letter_z);
                         lettersList[i].setTag("Z");
                     } else if (thisTag == "S"){
-                        lettersList[i].setImageResource(R.drawable.letter_a);
+                        lettersList[i].setImageResource(R.drawable.period);
                         lettersList[i].setTag(".");
                     } else if (thisTag == "T"){
-                        lettersList[i].setImageResource(R.drawable.letter_b);
+                        lettersList[i].setImageResource(R.drawable.exclamation);
                         lettersList[i].setTag("!");
                     } else if (thisTag == "U"){
-                        lettersList[i].setImageResource(R.drawable.letter_c);
+                        lettersList[i].setImageResource(R.drawable.question);
                         lettersList[i].setTag("?");
                     } else if (thisTag == "V"){
-                        lettersList[i].setImageResource(R.drawable.letter_d);
+                        lettersList[i].setImageResource(R.drawable.apostrophe);
                         lettersList[i].setTag("'");
                     } else if (thisTag == "W"){
-                        lettersList[i].setImageResource(R.drawable.letter_e);
+                        lettersList[i].setImageResource(R.drawable.dash);
                         lettersList[i].setTag("-");
                     } else if (thisTag == "X"){
-                        lettersList[i].setImageResource(R.drawable.letter_f);
+                        lettersList[i].setImageResource(R.drawable.tilde);
                         lettersList[i].setTag("~");
                     }
                 }
@@ -403,22 +402,22 @@ public class Dragging extends AppCompatActivity {
                             image.setImageResource(R.drawable.letter_z);
                             image.setTag("Z");
                         } else if (view.getTag() == ".") {
-                            image.setImageResource(R.drawable.letter_a);
+                            image.setImageResource(R.drawable.period);
                             image.setTag(".");
                         } else if (view.getTag() == "!") {
-                            image.setImageResource(R.drawable.letter_b);
+                            image.setImageResource(R.drawable.exclamation);
                             image.setTag("!");
                         } else if (view.getTag() == "?") {
-                            image.setImageResource(R.drawable.letter_c);
+                            image.setImageResource(R.drawable.question);
                             image.setTag("?");
                         } else if (view.getTag() == "'") {
-                            image.setImageResource(R.drawable.letter_d);
+                            image.setImageResource(R.drawable.apostrophe);
                             image.setTag("'");
                         } else if (view.getTag() == "-") {
-                            image.setImageResource(R.drawable.letter_e);
+                            image.setImageResource(R.drawable.dash);
                             image.setTag("-");
                         } else if (view.getTag() == "~") {
-                            image.setImageResource(R.drawable.letter_f);
+                            image.setImageResource(R.drawable.tilde);
                             image.setTag("~");
                         }
                         lettersOnScreen[letterCount] = (ImageView) view;
