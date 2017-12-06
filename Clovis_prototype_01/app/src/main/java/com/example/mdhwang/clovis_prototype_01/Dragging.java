@@ -34,6 +34,8 @@ public class Dragging extends AppCompatActivity {
     float newY;
 
     ImageView first, second, third, fourth, fifth, sixth, seventh, eighth, trashCan;
+    ConstraintLayout paper;
+    private int paper_width;
     // IDs: 0x7f07 0035, 007d, 0094, 0036, 0034, 0084, 007f, 002f, 009b
     private void initializeDict(HashMap<Character, Integer> myDict, char[] myKeys, int myVals){
         for (int i = 0; i < myKeys.length; i++){
@@ -64,6 +66,7 @@ public class Dragging extends AppCompatActivity {
 
     public void clearScreen(View view){
         ConstraintLayout screen = (ConstraintLayout) findViewById(R.id.paper);
+
         for (int i = 0; i < letterCount; i++){
             screen.removeView(lettersOnScreen[i]);
         }
@@ -77,8 +80,10 @@ public class Dragging extends AppCompatActivity {
 //        Log.d("ImageDict", ImageDict.toString());
 //        initializeBar(lettersList, letterIdStart);
         initializeSounds();
+        paper = (ConstraintLayout) findViewById(R.id.paper);
 
         leftBtn = (ImageButton) findViewById(R.id.btn_left);
+
         rightBtn = (ImageButton) findViewById(R.id.btn_right);
         first = (ImageView) findViewById(R.id.first);
         second = (ImageView) findViewById(R.id.second);
