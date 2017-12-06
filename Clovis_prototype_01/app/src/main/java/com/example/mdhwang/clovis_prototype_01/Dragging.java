@@ -421,8 +421,8 @@ public class Dragging extends AppCompatActivity {
                         mylayout.addView(image);
                         image.setX(view_x);
                         image.setY(view_y);
-                        image.getLayoutParams().width = 130;
-                        image.getLayoutParams().height = 140;
+                        image.getLayoutParams().width = paper_width/10;
+                        image.getLayoutParams().height = paper_width/10 + 10;
                         image.setOnTouchListener(new MyTouchListener());
                         if (view.getTag() == "A" || view.getTag() == "I" || view.getTag() == "Q" || view.getTag() == "Y"){
                             lettersList[0] = image;
