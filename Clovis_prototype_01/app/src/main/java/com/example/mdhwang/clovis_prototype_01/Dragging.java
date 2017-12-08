@@ -8,57 +8,67 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 import java.util.HashMap;
 
-
 public class Dragging extends AppCompatActivity {
 
+    // Create the scrollbar's imageButtons/Views.
     private ImageButton leftBtn, rightBtn;
-    private HashMap<Character, Integer> ImageDict = new HashMap<Character, Integer>();
-    private char[] ImageKeys = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-    private int ImageValueStart = 0x7f060056; // Drawable start index
-    private ImageView[] lettersList = new ImageView[8];
-    private int[] letterIdStart = {0x7f070035, 0x7f07007d, 0x7f070094, 0x7f070036, 0x7f070034, 0x7f070084, 0x7f07007f, 0x7f07002f};
+    ImageView first, second, third, fourth, fifth, sixth, seventh, eighth, trashCan;
+    private ImageView[] lettersList = new ImageView[8]; // Scrollbar to hold the 8 ImageViews
+
+    // ImageView array to keep track of non Scrollbar letter ImageViews
+    // For purpose of clearing screen
     private ImageView[] lettersOnScreen = new ImageView[128];
     private int letterCount = 0;
 
+    // Audio
     MediaPlayer mp1, mp2, mp3, water, zip;
+
+    // Screen parameters
+    // For purpose of resizing imageViews accordingly
+    // Not yet correctly implemented
+    ConstraintLayout paper;
+    private int paper_width;
+    private int icon_width, icon_height;
+
+    // Drag and Drop distances
     float dX;
     float dY;
     float newX;
     float newY;
 
-    ImageView first, second, third, fourth, fifth, sixth, seventh, eighth, trashCan;
-    ConstraintLayout paper;
-    private int paper_width;
-    private int icon_width, icon_height;
+    // Create a HashMap, Keys, and Values for ease of ImageView background change
+    // Not Yet Fully Implemented
+    private HashMap<Character, Integer> ImageDict = new HashMap<Character, Integer>();
+    private char[] ImageKeys = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+    private int ImageValueStart = 0x7f060056; // Drawable start index (R.drawable.letter_a = 0x7f060056)
+    private int[] letterIdStart = {0x7f070035, 0x7f07007d, 0x7f070094, 0x7f070036, 0x7f070034, 0x7f070084, 0x7f07007f, 0x7f07002f}; // ID start indices
     // IDs: 0x7f07 0035, 007d, 0094, 0036, 0034, 0084, 007f, 002f, 009b
+
+
     private void initializeDict(HashMap<Character, Integer> myDict, char[] myKeys, int myVals){
+        // Initialize the dictionary of letter to the corresponding Drawable
         for (int i = 0; i < myKeys.length; i++){
-//            Log.d("Key: ", Character.toString(myKeys[i]));
-//            Log.d("Value: ", Integer.toString(myVals));
             myDict.put(myKeys[i],myVals);
             myVals++;
         }
     }
 
     private void initializeBar(ImageView[] myBar, int[] myVals){
+        // Assign the corresponding imageView to position in the scrollbar
         if (myBar.length >= myVals.length) {
             for (int i = 0; i < myBar.length; i++) {
                 myBar[i] = (ImageView) findViewById(myVals[i]);
             }
-        } else{
-
         }
     }
 
     private void initializeSounds(){
+        // Initialize all sounds
         mp1 = MediaPlayer.create(this, R.raw.ripping_1);
         mp2 = MediaPlayer.create(this, R.raw.ripping_2);
         mp3 = MediaPlayer.create(this, R.raw.ripping_3);
@@ -67,8 +77,8 @@ public class Dragging extends AppCompatActivity {
     }
 
     public void clearScreen(View view){
+        // Clear the screen by removing from lettersOnScreen
         ConstraintLayout screen = (ConstraintLayout) findViewById(R.id.paper);
-
         for (int i = 0; i < letterCount; i++){
             screen.removeView(lettersOnScreen[i]);
         }
@@ -78,22 +88,13 @@ public class Dragging extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dragging);
-        initializeDict(ImageDict, ImageKeys, ImageValueStart);
-//        Log.d("ImageDict", ImageDict.toString());
+//        initializeDict(ImageDict, ImageKeys, ImageValueStart);
 //        initializeBar(lettersList, letterIdStart);
         initializeSounds();
         int displayWidth = getWindowManager().getDefaultDisplay().getWidth();
-        Log.d("Width: ", String.valueOf(displayWidth));
         paper = (ConstraintLayout) findViewById(R.id.paper);
-        paper_width = displayWidth/10;
         icon_width = displayWidth/10;
         icon_height = displayWidth/10;
-        Log.d("paper_width: ", String.valueOf(paper_width));
-//        ViewGroup.LayoutParams paperParams = paper.getLayoutParams();
-//        Log.d("Width: ", String.valueOf(paperParams.width));
-//        Log.d("Height: ", String.valueOf(paperParams.height));
-//        paper_width = paper.getLayoutParams().width;
-
 
         leftBtn = (ImageButton) findViewById(R.id.btn_left);
         leftBtn.getLayoutParams().width = icon_width;
@@ -135,6 +136,7 @@ public class Dragging extends AppCompatActivity {
         lettersList[5] = sixth;
         lettersList[6] = seventh;
         lettersList[7] = eighth;
+
         first = (ImageView) findViewById(R.id.first);
         first.setTag("A");
         first.setOnTouchListener(new MyTouchListener());
@@ -164,7 +166,6 @@ public class Dragging extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Left Click", Toast.LENGTH_SHORT).show();
                 for (int i = 0; i < lettersList.length; i++){
                     ImageView thisLetter = lettersList[i];
                     String thisTag = (String) thisLetter.getTag();
@@ -513,6 +514,4 @@ public class Dragging extends AppCompatActivity {
             return true;
         }
     }
-
-
 }
