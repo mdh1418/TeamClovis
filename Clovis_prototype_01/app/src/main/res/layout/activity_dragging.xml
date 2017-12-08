@@ -37,6 +37,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="120dp"
         android:contentDescription="@string/first"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_a" />
@@ -47,6 +48,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="250dp"
         android:contentDescription="@string/second"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_b" />
@@ -57,6 +59,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="380dp"
         android:contentDescription="@string/third"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_c" />
@@ -67,6 +70,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="508dp"
         android:contentDescription="@string/fourth"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_d" />
@@ -77,6 +81,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="640dp"
         android:contentDescription="@string/fifth"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_e" />
@@ -87,6 +92,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="770dp"
         android:contentDescription="@string/sixth"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_f" />
@@ -97,6 +103,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="900dp"
         android:contentDescription="@string/seventh"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_g" />
@@ -107,6 +114,7 @@
         android:layout_height="140dp"
         android:layout_marginStart="1030dp"
         android:contentDescription="@string/eighth"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/letter_h" />
@@ -116,18 +124,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/trash"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/trash" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="2dp"
         android:layout_marginEnd="2dp"
         android:onClick="clearScreen"
+        android:scaleType="fitCenter"
         android:text="@string/clear_screen"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

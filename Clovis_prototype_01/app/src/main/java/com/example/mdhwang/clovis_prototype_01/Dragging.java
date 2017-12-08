@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -36,6 +37,7 @@ public class Dragging extends AppCompatActivity {
     ImageView first, second, third, fourth, fifth, sixth, seventh, eighth, trashCan;
     ConstraintLayout paper;
     private int paper_width;
+    private int icon_width, icon_height;
     // IDs: 0x7f07 0035, 007d, 0094, 0036, 0034, 0084, 007f, 002f, 009b
     private void initializeDict(HashMap<Character, Integer> myDict, char[] myKeys, int myVals){
         for (int i = 0; i < myKeys.length; i++){
@@ -80,18 +82,49 @@ public class Dragging extends AppCompatActivity {
 //        Log.d("ImageDict", ImageDict.toString());
 //        initializeBar(lettersList, letterIdStart);
         initializeSounds();
+        int displayWidth = getWindowManager().getDefaultDisplay().getWidth();
+        Log.d("Width: ", String.valueOf(displayWidth));
         paper = (ConstraintLayout) findViewById(R.id.paper);
+        paper_width = displayWidth/10;
+        icon_width = displayWidth/10;
+        icon_height = displayWidth/10;
+        Log.d("paper_width: ", String.valueOf(paper_width));
+//        ViewGroup.LayoutParams paperParams = paper.getLayoutParams();
+//        Log.d("Width: ", String.valueOf(paperParams.width));
+//        Log.d("Height: ", String.valueOf(paperParams.height));
+//        paper_width = paper.getLayoutParams().width;
+
 
         leftBtn = (ImageButton) findViewById(R.id.btn_left);
+        leftBtn.getLayoutParams().width = icon_width;
+        leftBtn.getLayoutParams().height = icon_height;
         rightBtn = (ImageButton) findViewById(R.id.btn_right);
+        rightBtn.getLayoutParams().width = icon_width;
+        rightBtn.getLayoutParams().height = icon_height;
         first = (ImageView) findViewById(R.id.first);
+        first.getLayoutParams().width = icon_width;
+        first.getLayoutParams().height = icon_height;
         second = (ImageView) findViewById(R.id.second);
+        second.getLayoutParams().width = icon_width;
+        second.getLayoutParams().height = icon_height;
         third = (ImageView) findViewById(R.id.third);
+        third.getLayoutParams().width = icon_width;
+        third.getLayoutParams().height = icon_height;
         fourth = (ImageView) findViewById(R.id.fourth);
+        fourth.getLayoutParams().width = icon_width;
+        fourth.getLayoutParams().height = icon_height;
         fifth = (ImageView) findViewById(R.id.fifth);
+        fifth.getLayoutParams().width = icon_width;
+        fifth.getLayoutParams().height = icon_height;
         sixth = (ImageView) findViewById(R.id.sixth);
+        sixth.getLayoutParams().width = icon_width;
+        sixth.getLayoutParams().height = icon_height;
         seventh = (ImageView) findViewById(R.id.seventh);
+        seventh.getLayoutParams().width = icon_width;
+        seventh.getLayoutParams().height = icon_height;
         eighth = (ImageView) findViewById(R.id.eighth);
+        eighth.getLayoutParams().width = icon_width;
+        eighth.getLayoutParams().height = icon_height;
         trashCan = (ImageView) findViewById(R.id.trash);
 
         lettersList[0] = first;
@@ -425,8 +458,8 @@ public class Dragging extends AppCompatActivity {
                         mylayout.addView(image);
                         image.setX(view_x);
                         image.setY(view_y);
-                        image.getLayoutParams().width = paper_width/10;
-                        image.getLayoutParams().height = paper_width/10 + 10;
+                        image.getLayoutParams().width = icon_width;
+                        image.getLayoutParams().height = icon_height;
                         image.setOnTouchListener(new MyTouchListener());
                         if (view.getTag() == "A" || view.getTag() == "I" || view.getTag() == "Q" || view.getTag() == "Y"){
                             lettersList[0] = image;
