@@ -78,6 +78,7 @@ public class Dragging extends AppCompatActivity {
 
     public void clearScreen(View view){
         // Clear the screen by removing from lettersOnScreen
+        zip.start();
         ConstraintLayout screen = (ConstraintLayout) findViewById(R.id.paper);
         for (int i = 0; i < letterCount; i++){
             screen.removeView(lettersOnScreen[i]);
@@ -354,103 +355,134 @@ public class Dragging extends AppCompatActivity {
             switch (event.getActionMasked()) {
                 case MotionEvent.ACTION_DOWN:
                     if (view.getTag() != "") {
-                        mp1.start();
                         ImageView image = new ImageView(Dragging.this);
                         ConstraintLayout mylayout = (ConstraintLayout) findViewById(R.id.paper);
                         if (view.getTag() == "A") {
+                            water.start();
                             image.setImageResource(R.drawable.letter_a);
                             image.setTag("A");
                         } else if (view.getTag() == "B") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_b);
                             image.setTag("B");
                         } else if (view.getTag() == "C") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_c);
                             image.setTag("C");
                         } else if (view.getTag() == "D") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_d);
                             image.setTag("D");
                         } else if (view.getTag() == "E") {
+                            water.start();
                             image.setImageResource(R.drawable.letter_e);
                             image.setTag("E");
                         } else if (view.getTag() == "F") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_f);
                             image.setTag("F");
                         } else if (view.getTag() == "G") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_g);
                             image.setTag("G");
                         } else if (view.getTag() == "H") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_h);
                             image.setTag("H");
                         } else if (view.getTag() == "I") {
+                            water.start();
                             image.setImageResource(R.drawable.letter_i);
                             image.setTag("I");
                         } else if (view.getTag() == "J") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_j);
                             image.setTag("J");
                         } else if (view.getTag() == "K") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_k);
                             image.setTag("K");
                         } else if (view.getTag() == "L") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_l);
                             image.setTag("L");
                         } else if (view.getTag() == "M") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_m);
                             image.setTag("M");
                         } else if (view.getTag() == "N") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_n);
                             image.setTag("N");
                         } else if (view.getTag() == "O") {
+                            water.start();
                             image.setImageResource(R.drawable.letter_o);
                             image.setTag("O");
                         } else if (view.getTag() == "P") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_p);
                             image.setTag("P");
                         } else if (view.getTag() == "Q") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_q);
                             image.setTag("Q");
                         } else if (view.getTag() == "R") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_r);
                             image.setTag("R");
                         } else if (view.getTag() == "S") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_s);
                             image.setTag("S");
                         } else if (view.getTag() == "T") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_t);
                             image.setTag("T");
                         } else if (view.getTag() == "U") {
+                            water.start();
                             image.setImageResource(R.drawable.letter_u);
                             image.setTag("U");
                         } else if (view.getTag() == "V") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_v);
                             image.setTag("V");
                         } else if (view.getTag() == "W") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_w);
                             image.setTag("W");
                         } else if (view.getTag() == "X") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_x);
                             image.setTag("X");
                         } else if (view.getTag() == "Y") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_y);
                             image.setTag("Y");
                         } else if (view.getTag() == "Z") {
+                            mp1.start();
                             image.setImageResource(R.drawable.letter_z);
                             image.setTag("Z");
                         } else if (view.getTag() == ".") {
+                            water.start();
                             image.setImageResource(R.drawable.period);
                             image.setTag(".");
                         } else if (view.getTag() == "!") {
+                            water.start();
                             image.setImageResource(R.drawable.exclamation);
                             image.setTag("!");
                         } else if (view.getTag() == "?") {
+                            water.start();
                             image.setImageResource(R.drawable.question);
                             image.setTag("?");
                         } else if (view.getTag() == "'") {
+                            water.start();
                             image.setImageResource(R.drawable.apostrophe);
                             image.setTag("'");
                         } else if (view.getTag() == "-") {
+                            water.start();
                             image.setImageResource(R.drawable.dash);
                             image.setTag("-");
                         } else if (view.getTag() == "~") {
+                            water.start();
                             image.setImageResource(R.drawable.tilde);
                             image.setTag("~");
                         }
@@ -497,7 +529,9 @@ public class Dragging extends AppCompatActivity {
                     if (newY >= paper_y && (newY + view_height) <= (paper_y + paper_height)) {
                         view.setY(event.getRawY() + dY);
                     }
-                    mp2.start();
+                    if (view.getTag() == "") {
+                        mp2.start();
+                    }
                     view.invalidate();
                     break;
 
