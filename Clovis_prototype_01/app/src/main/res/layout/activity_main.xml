@@ -5,67 +5,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/One"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="1000dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="275dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="275dp"
-        android:layout_weight="1"
-        android:onClick="startVersionOne"
-        android:text= "Two Scroll Bar"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="38dp"
+        android:layout_marginEnd="522dp"
+        android:layout_marginStart="1000dp"
+        android:layout_marginTop="100dp"
+        android:text="Clovis Keyboard"
+        android:textAppearance="@android:style/TextAppearance.Material.Notification.Title"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/DraggingRed"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Two"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="275dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="275dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="28dp"
         android:onClick="startVersionTwo"
         android:text="@string/version_two"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/One"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Dragging" />
+
+    <Button
+        android:id="@+id/DraggingRed"
+        android:layout_width="0dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:onClick="startDraggingRed"
+        android:text="Drag and Drop (RED)"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/Dragging"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/GIFS"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="450dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginStart="540dp"
+        android:layout_width="209dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
         android:onClick="startVersionGIFS"
-        android:text="Two Scroll Bar w/ Animation"
+        android:text="Two Scroll Bar + Grid + Animation"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Dragging"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/Two"
+        app:layout_constraintTop_toBottomOf="@+id/DraggingRed" />
 
     <Button
         android:id="@+id/Dragging"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="150dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginStart="540dp"
+        android:layout_marginStart="400dp"
+        android:layout_marginTop="222dp"
         android:onClick="startDragging"
         android:text="Drag and Drop (FINAL)"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/GIFS"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/One"
+        android:layout_width="201dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="31dp"
+        android:layout_weight="1"
+        android:onClick="startVersionOne"
+        android:text="Two Scroll Bar"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/GIFS"
+        app:layout_constraintTop_toBottomOf="@+id/DraggingRed" />
 
 </android.support.constraint.ConstraintLayout>
     <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->

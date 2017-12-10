@@ -62,12 +62,16 @@ public class MainActivity extends AppCompatActivity{
         Intent intent = new Intent(this, VersionGIFS.class);
         startActivity(intent);
     }
-
+    //Final Version
     public void startDragging (View view){
         Intent intent = new Intent(this, Dragging.class);
         startActivity(intent);
     }
-
+    //Final Version Red
+    public void startDraggingRed (View view){
+        Intent intent = new Intent(this, DraggingRed.class);
+        startActivity(intent);
+    }
 
 }
 
