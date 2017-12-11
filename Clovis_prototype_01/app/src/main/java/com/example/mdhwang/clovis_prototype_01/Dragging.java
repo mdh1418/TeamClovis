@@ -374,7 +374,7 @@ public class Dragging extends AppCompatActivity {
                 case MotionEvent.ACTION_DOWN:
                     // If first touching the icon, create a duplicate to take its place
                     if (view.getTag() != "") {
-                        // If it is not in the scrollbar, create a new image
+                        // If it is a scrollbar image, create a new image to take its place in the scrollbar
                         // Play sounds accordingly, water for vowels, rip for consonants
                         ImageView image = new ImageView(Dragging.this);
                         ConstraintLayout mylayout = (ConstraintLayout) findViewById(R.id.paper);
@@ -512,7 +512,7 @@ public class Dragging extends AppCompatActivity {
                         lettersOnScreen[letterCount] = (ImageView) view;
                         letterCount++;
 
-                        // Add the new image to the layout to take its place in the scrollBar
+                        // Move the new image to the location of the old one and resize
                         mylayout.addView(image);
                         image.setX(view_x);
                         image.setY(view_y);
@@ -540,7 +540,7 @@ public class Dragging extends AppCompatActivity {
                         }
                     }
 
-                    // Keep relative distance between pointer and imageview
+                    // Keep relative distance between pointer/finger and the imageView
                     dX = view.getX() - event.getRawX();
                     dY = view.getY() - event.getRawY();
 
