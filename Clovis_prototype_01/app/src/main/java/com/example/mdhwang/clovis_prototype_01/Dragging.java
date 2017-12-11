@@ -5,7 +5,6 @@ import android.media.MediaPlayer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -92,11 +91,14 @@ public class Dragging extends AppCompatActivity {
 //        initializeDict(ImageDict, ImageKeys, ImageValueStart);
 //        initializeBar(lettersList, letterIdStart);
         initializeSounds();
+
+        // Attempting to scale the icons to 1/10th the size of the screen
         int displayWidth = getWindowManager().getDefaultDisplay().getWidth();
         paper = (ConstraintLayout) findViewById(R.id.paper);
         icon_width = displayWidth/10;
         icon_height = displayWidth/10;
 
+        // Initialize the starting icons
         leftBtn = (ImageButton) findViewById(R.id.btn_left);
         leftBtn.getLayoutParams().width = icon_width;
         leftBtn.getLayoutParams().height = icon_height;
@@ -129,6 +131,7 @@ public class Dragging extends AppCompatActivity {
         eighth.getLayoutParams().height = icon_height;
         trashCan = (ImageView) findViewById(R.id.trash);
 
+        // Place the letters into the scrollBar
         lettersList[0] = first;
         lettersList[1] = second;
         lettersList[2] = third;
@@ -138,28 +141,30 @@ public class Dragging extends AppCompatActivity {
         lettersList[6] = seventh;
         lettersList[7] = eighth;
 
-        first = (ImageView) findViewById(R.id.first);
+        // Set the tags of the scrollBar
+        // Attach the drag and drop MyTouchListener function to each of these
+//        first = (ImageView) findViewById(R.id.first);
         first.setTag("A");
         first.setOnTouchListener(new MyTouchListener());
-        second = (ImageView) findViewById(R.id.second);
+//        second = (ImageView) findViewById(R.id.second);
         second.setTag("B");
         second.setOnTouchListener(new MyTouchListener());
-        third = (ImageView) findViewById(R.id.third);
+//        third = (ImageView) findViewById(R.id.third);
         third.setTag("C");
         third.setOnTouchListener(new MyTouchListener());
-        fourth = (ImageView) findViewById(R.id.fourth);
+//        fourth = (ImageView) findViewById(R.id.fourth);
         fourth.setTag("D");
         fourth.setOnTouchListener(new MyTouchListener());
-        fifth = (ImageView) findViewById(R.id.fifth);
+//        fifth = (ImageView) findViewById(R.id.fifth);
         fifth.setTag("E");
         fifth.setOnTouchListener(new MyTouchListener());
-        sixth = (ImageView) findViewById(R.id.sixth);
+//        sixth = (ImageView) findViewById(R.id.sixth);
         sixth.setTag("F");
         sixth.setOnTouchListener(new MyTouchListener());
-        seventh = (ImageView) findViewById(R.id.seventh);
+//        seventh = (ImageView) findViewById(R.id.seventh);
         seventh.setTag("G");
         seventh.setOnTouchListener(new MyTouchListener());
-        eighth = (ImageView) findViewById(R.id.eighth);
+//        eighth = (ImageView) findViewById(R.id.eighth);
         eighth.setTag("H");
         eighth.setOnTouchListener(new MyTouchListener());
 
@@ -167,6 +172,8 @@ public class Dragging extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                // If the left button is pressed, change the backgrounds of the
+                // letters to 8 symbols to their left
                 for (int i = 0; i < lettersList.length; i++){
                     ImageView thisLetter = lettersList[i];
                     String thisTag = (String) thisLetter.getTag();
@@ -250,6 +257,8 @@ public class Dragging extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                // If the right button is pressed, change the backgrounds of the
+                // letters to the 8 symbols to their right.
                 for (int i = 0; i < lettersList.length; i++){
                     ImageView thisLetter = lettersList[i];
                     String thisTag = (String) thisLetter.getTag();
@@ -333,28 +342,40 @@ public class Dragging extends AppCompatActivity {
 
 
     private final class MyTouchListener implements View.OnTouchListener {
+        // Override with new onTouch functionality
         public boolean onTouch(View view, MotionEvent event) {
+
+            // Obtain the layout to move in
             ConstraintLayout paper_layout = (ConstraintLayout) findViewById(R.id.paper);
-//            RelativeLayout paper_layout = (RelativeLayout) findViewById(R.id.paper);
+
+            // Obtain the bounds of the layout
             int paper_x = (int) paper_layout.getX();
             int paper_y = (int) paper_layout.getY();
             int paper_width = paper_layout.getWidth();
             int paper_height = paper_layout.getHeight();
+
+            // Find the rectangle associated to the imageView
             int view_x, view_y, view_width, view_height;
             view_x = (int)view.getX();
             view_y = (int)view.getY();
             view_width = view.getWidth();
             view_height = view.getHeight();
             Rect letterRect = new Rect(view_x, view_y, view_x + view_width, view_y + view_height);
+
+            // Find the rectangle associated to the trashcan
             int trash_x, trash_y, trash_width, trash_height;
             trash_x = (int)trashCan.getX();
             trash_y = (int)trashCan.getY();
             trash_width = trashCan.getWidth();
             trash_height = trashCan.getHeight();
             Rect trashRect = new Rect(trash_x, trash_y, trash_x + trash_width, trash_y + trash_height);
+
             switch (event.getActionMasked()) {
                 case MotionEvent.ACTION_DOWN:
+                    // If first touching the icon, create a duplicate to take its place
                     if (view.getTag() != "") {
+                        // If it is not in the scrollbar, create a new image
+                        // Play sounds accordingly, water for vowels, rip for consonants
                         ImageView image = new ImageView(Dragging.this);
                         ConstraintLayout mylayout = (ConstraintLayout) findViewById(R.id.paper);
                         if (view.getTag() == "A") {
@@ -486,14 +507,20 @@ public class Dragging extends AppCompatActivity {
                             image.setImageResource(R.drawable.tilde);
                             image.setTag("~");
                         }
+
+                        // Add the imageView being moved to an array of onScreen letters
                         lettersOnScreen[letterCount] = (ImageView) view;
                         letterCount++;
+
+                        // Add the new image to the layout to take its place in the scrollBar
                         mylayout.addView(image);
                         image.setX(view_x);
                         image.setY(view_y);
                         image.getLayoutParams().width = icon_width;
                         image.getLayoutParams().height = icon_height;
                         image.setOnTouchListener(new MyTouchListener());
+
+                        // Replace the old imageView in scrollBar
                         if (view.getTag() == "A" || view.getTag() == "I" || view.getTag() == "Q" || view.getTag() == "Y"){
                             lettersList[0] = image;
                         } else if (view.getTag() == "B" || view.getTag() == "J" || view.getTag() == "R" || view.getTag() == "Z"){
@@ -516,13 +543,17 @@ public class Dragging extends AppCompatActivity {
                     // Keep relative distance between pointer and imageview
                     dX = view.getX() - event.getRawX();
                     dY = view.getY() - event.getRawY();
+
+                    // Because this is a scrollBar image view being moved, remove its tag
                     view.setTag("");
                     view.invalidate();
                     break;
 
                 case MotionEvent.ACTION_MOVE:
+                    // Find the new coordinates for this imageView
                     newX = event.getRawX() + dX;
                     newY = event.getRawY() + dY;
+                    // Only move if it won't go out of bounds.
                     if (newX >= paper_x && (newX + view_width) <= (paper_x + paper_width)) {
                         view.setX(event.getRawX() + dX);
                     }
@@ -536,6 +567,7 @@ public class Dragging extends AppCompatActivity {
                     break;
 
                 case MotionEvent.ACTION_UP:
+                    // If the user releases the imageView and it intersects the trashcan, remove the image
                     if (Rect.intersects(letterRect, trashRect)){
                         ConstraintLayout myLayout = (ConstraintLayout) findViewById(R.id.paper);
                         zip.start();
