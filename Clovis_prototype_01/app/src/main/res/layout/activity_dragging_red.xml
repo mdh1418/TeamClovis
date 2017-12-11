@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mdhwang.clovis_prototype_01.DraggingRed"
+    tools:layout_editor_absoluteY="89dp">
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/btn_left"
+        android:scaleType="fitCenter"
+        android:src="@drawable/left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_right"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:contentDescription="@string/btn_right"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/right" />
+
+    <ImageView
+        android:id="@+id/first"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="100dp"
+        android:contentDescription="@string/first"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_a_red" />
+
+    <ImageView
+        android:id="@+id/second"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="200dp"
+        android:contentDescription="@string/second"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_b_red" />
+
+    <ImageView
+        android:id="@+id/third"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="300dp"
+        android:contentDescription="@string/third"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_c_red" />
+
+    <ImageView
+        android:id="@+id/fourth"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="400dp"
+        android:contentDescription="@string/fourth"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_d_red" />
+
+    <ImageView
+        android:id="@+id/fifth"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="500dp"
+        android:contentDescription="@string/fifth"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_e_red" />
+
+    <ImageView
+        android:id="@+id/sixth"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="600dp"
+        android:contentDescription="@string/sixth"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_f_red" />
+
+    <ImageView
+        android:id="@+id/seventh"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="700dp"
+        android:contentDescription="@string/seventh"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_g_red" />
+
+    <ImageView
+        android:id="@+id/eighth"
+        android:layout_width="130dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="800dp"
+        android:contentDescription="@string/eighth"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/letter_h_red" />
+
+    <ImageView
+        android:id="@+id/trash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/trash"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/trash" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:onClick="clearScreen"
+        android:scaleType="fitCenter"
+        android:text="@string/clear_screen"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
