@@ -64,7 +64,7 @@
         android:layout_marginStart="400dp"
         android:layout_marginTop="222dp"
         android:onClick="startDragging"
-        android:text="Drag and Drop (FINAL)"
+        android:text="Drag and Drop (Black)"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -77,7 +77,7 @@
         android:layout_marginTop="31dp"
         android:layout_weight="1"
         android:onClick="startVersionOne"
-        android:text="Two Scroll Bar"
+        android:text="Two Scroll Bar Only"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/GIFS"
         app:layout_constraintTop_toBottomOf="@+id/DraggingRed" />
