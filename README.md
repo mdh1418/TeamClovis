@@ -70,4 +70,4 @@ Clovis_prototype_01 --> app --> src --> main --> res --> layout --> activity_dra
 * Arden Marin
 
 ## Acknowledgments
-We would like to express our sincere gratitude to Clovis, Nathalie, Joachim, Jason, MikeJ and Elise for working with us to develop the dynamic keyboard this semester. Thank you Professor Julie GreenBerg and Tina Quach for advising and supporting us throughout this project. 
+We would like to express our most sincere gratitude to Clovis, Nathalie, Joachim, Jason, MikeJ and Elise for working with us to develop the dynamic keyboard this semester. Thank you Professor Julie GreenBerg and Tina Quach for advising and supporting us throughout this project. 
