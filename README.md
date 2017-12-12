@@ -1,5 +1,4 @@
 # TeamClovis
-Project for PPAT
 
 This is the Android Studio code for the Fall 2017 MIT PPAT Team Clovis Project. It is a dynamic drag and drop keyboard with audio effects on selected buttons.
 
@@ -51,14 +50,14 @@ Clovis_prototype_01 --> app --> src --> main --> res --> layout --> activity_dra
 ```
 
 ## Using the Keyboards
-### For Drag and Drop (Black) and Drag and Drop (Red) 
+### For Drag and Drop (Black) and Drag and Drop (Red): 
 * From the homepage, select "Drag and Drop (Black)" or "Drag and Drop (Red)"
 * To select different letters, tap on the left or right button icons on the top left and top right corners of the screen respectively
 * To begin typing, tap on the letters with your finger and drag it into the white space in the center. You can drag the letters around the white space thereafter. 
 * To delete a selected letter, drag it to the image of Oscar the Grouch. 
 * To clear all the letters, click on the 'Clear' button on the bottom right corner of the screen. 
 
-### For ScrollBars
+### For Scroll Bars:
 * From the homepage, select "One Scroll Bar" or "Two Scroll Bar Only" or "Two Scroll Bar + Grid + Animation"
 * To select different letters, scroll up and down and tap on the letter first. 
 * The selected letter will appear on the top left hand side of the screen. You will be able to drag the letters around the canvas thereafter.  
