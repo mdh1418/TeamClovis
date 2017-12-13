@@ -13,10 +13,10 @@ Within Android Studio, select 'Build' from the top bar --> Build APK
 
 B) To export application from your computer to the tablet, follow these steps: 
 
-#### NOTE: For Mac users, download Android File Transfer software from https://www.android.com/filetransfer/. Then, drag your apk file from your computer into the Android File Transfer popup on your screen ####
+#### NOTE: For Mac users, you need to download Android File Transfer software from https://www.android.com/filetransfer/ first. Then, drag your apk file from your computer into the Android File Transfer popup on your screen ####
 
 ```
-Use a usb cable to connect your tablet to your computer. On your tablet, select 'My Files' --> go to 'Downloads' --> click your apk file to install
+Connect your tablet to your computer with a USB cable. On your tablet, select 'My Files' --> go to 'Downloads' --> click your apk file to install
 ```
 
 ### Accessing Files from Android Studio
