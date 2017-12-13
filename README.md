@@ -4,19 +4,20 @@ This is the Android Studio code for the Fall 2017 MIT PPAT Team Clovis Project. 
 
 ## Getting Started
 
-### Prerequisites 
-What do we need to install the software and how to install them. 
+### Accessing Files from Android Studio
+* To access Java file with the code for the drag and drop keyboard, Select the following folders in this order: 
+
+For example:
 ```
-Give examples
+Clovis_prototype_01 --> app --> src --> main --> java/com/example/mdhwang/clovis_prototyp --> DraggingRed.java 
 ```
 
-### Installing 
-A step by step series of examples that tell you have to get a development env running
+* To access the XML file with the code that defines the user interface of the keyboard, Select the following folders in this order:
 
+For example:
 ```
-Give examples
+Clovis_prototype_01 --> app --> src --> main --> res --> layout --> activity_dragging_red.xml
 ```
-
 
 ## About the Keyboards
 We created 5 different versions of the dynamic keyboard for our client. As such, there are 5 copies of XML files and Java files for each respective version. To learn how to access each individual file, see the next section 'Accessing Files from Android Studio'. 
@@ -32,22 +33,6 @@ On the homepage, you will find 5 buttons with the following names. Clicking on e
 4. TWO SCROLLBAR + GRID + ANIMATION: Typing Interface with two scroll bars, a grid as the background canvas and animated letters. 
 
 5. TWO SCROLLBAR: Typing Interface with only two scrollbars. 
-
-
-### Accessing Files from Android Studio
-* To access Java file with the code for the drag and drop keyboard, Select the following folders in this order: 
-
-For example:
-```
-Clovis_prototype_01 --> app --> src --> main --> java/com/example/mdhwang/clovis_prototyp --> DraggingRed.java 
-```
-
-* To access the XML file with the code that defines the user interface of the keyboard, Select the following folders in this order:
-
-For example:
-```
-Clovis_prototype_01 --> app --> src --> main --> res --> layout --> activity_dragging_red.xml
-```
 
 ## Using the Keyboards
 ### For Drag and Drop (Black) and Drag and Drop (Red): 
@@ -70,4 +55,4 @@ Clovis_prototype_01 --> app --> src --> main --> res --> layout --> activity_dra
 * Arden Marin
 
 ## Acknowledgments
-We would like to express our most sincere gratitude to Clovis, Nathalie, Joachim, Jason, MikeJ and Elise for working with us to develop the dynamic keyboard this semester. Thank you Professor Julie GreenBerg and Tina Quach for advising and supporting us throughout this project. 
+We would like to express our most sincere gratitude to Clovis, Nathalie, Joachim, Jason, MikeJ, and Elise for working with us to develop the dynamic keyboard this semester. Thank you Professor Julie GreenBerg, Tina Quach, and the PPAT team for advising and supporting us throughout this project.
