@@ -4,6 +4,10 @@ This is the Android Studio code for the Fall 2017 MIT PPAT Team Clovis Project. 
 
 ## Getting Started
 
+### Set-Up 
+First, download Android Studio from https://developer.android.com/studio/index.html
+To get started, look through Building Your First App: https://developer.android.com/training/basics/firstapp/index.html
+
 ### Installing the keyboard application on your tablet 
 
 A) To export the application from Android Studio, follow these steps: 
@@ -20,7 +24,9 @@ Connect your tablet to your computer with a USB cable. On your tablet, select 'M
 ```
 
 ### Accessing Files from Android Studio
-* To access Java file with the code for the drag and drop keyboard, Select the following folders in this order: 
+When familiarized with the Android Studio interface, locating our files is a simple task.
+
+* To access our drag and drop Java file, select the following folders in this order: 
 
 For example:
 ```
@@ -62,6 +68,9 @@ On the homepage, you will find 5 buttons with the following names. Clicking on e
 * To select different letters, scroll up and down and tap on the letter first. 
 * The selected letter will appear on the top left hand side of the screen. You will be able to drag the letters around the canvas thereafter.  
 * To delete a selected letter, drag the letter one by one to the image of Oscar the Grouch. 
+
+## Notes
+For our project, we had many deadlines and testing phases. Because of this, we did not have time to find the most elegant solution for dragging and dropping multiple letters.
 
 ## Authors
 * Mitchell Hwang 
