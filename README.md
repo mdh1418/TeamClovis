@@ -6,15 +6,14 @@ This is the Android Studio code for the Fall 2017 MIT PPAT Team Clovis Project. 
 
 ### Installing the keyboard application on your tablet 
 
-To export the application from Android Studio, follow these steps: 
+A) To export the application from Android Studio, follow these steps: 
 ```
 Within Android Studio, select 'Build' from the top bar --> Build APK 
 ```
 
-To export application from your computer to the tablet, follow these steps: 
+B) To export application from your computer to the tablet, follow these steps: 
 
-
-NOTE: For Mac users, download Android File Transfer software first. Then, drag your apk file from your computer into the android file transfer popup on your screen
+#### NOTE: For Mac users, download Android File Transfer software first. Then, drag your apk file from your computer into the android file transfer popup on your screen ####
 
 ```
 Use a usb cable to connect your tablet to your computer. On your tablet, select 'My Files' --> go to 'Downloads' --> click your apk file to install
