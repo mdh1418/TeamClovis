@@ -6,7 +6,8 @@ This is the Android Studio code for the Fall 2017 MIT PPAT Team Clovis Project. 
 
 ### Set-Up 
 First, download Android Studio from https://developer.android.com/studio/index.html
-To get started, look through Building Your First App: https://developer.android.com/training/basics/firstapp/index.html
+
+To get started with the basics of Android Studio, look through Building Your First App: https://developer.android.com/training/basics/firstapp/index.html
 
 ### Installing the keyboard application on your tablet 
 
@@ -70,7 +71,7 @@ On the homepage, you will find 5 buttons with the following names. Clicking on e
 * To delete a selected letter, drag the letter one by one to the image of Oscar the Grouch. 
 
 ## Notes
-For our project, we had many deadlines and testing phases. Because of this, we did not have time to find the most elegant solution for dragging and dropping multiple letters.
+For our project, we had many deadlines and testing phases. Because of this, we did not have time to find the most elegant solution for dragging and dropping multiple letters. Our code is currently hardcoded to fit our client's tablet, which is a Samsung Galaxy S2.
 
 ## Authors
 * Mitchell Hwang 
