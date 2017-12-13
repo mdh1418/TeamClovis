@@ -10,7 +10,6 @@ To export the application from Android Studio, follow these steps:
 ```
 Within Android Studio, select 'Build' from the top bar --> Build APK 
 ```
-For Macs, android file transfer. Drag your apk file to android file transfer. 
 
 To export application from your computer to the tablet, follow these steps: 
 
