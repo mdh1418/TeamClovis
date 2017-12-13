@@ -8,18 +8,17 @@ This is the Android Studio code for the Fall 2017 MIT PPAT Team Clovis Project. 
 
 To export the application from Android Studio, follow these steps: 
 ```
-In Android Studio --> Select 'Build' from the top bar --> Build APK 
+Within Android Studio, select 'Build' from the top bar --> Build APK 
 ```
 For Macs, android file transfer. Drag your apk file to android file transfer. 
 
 To export application from your computer to the tablet, follow these steps: 
 
-```
-For Mac users, download Android File Transfer software first. Then, drag your apk file from your computer into the android file transfer popup on your screen
-```
+
+NOTE: For Mac users, download Android File Transfer software first. Then, drag your apk file from your computer into the android file transfer popup on your screen
 
 ```
-Next, using a usb cable or email, select 'My Files' on your tablet --> go to 'Downloads' --> click your apk file to install
+Use a usb cable to connect your tablet to your computer. On your tablet, select 'My Files' --> go to 'Downloads' --> click your apk file to install
 ```
 
 ### Accessing Files from Android Studio
