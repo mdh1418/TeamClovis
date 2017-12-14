@@ -24,6 +24,9 @@ B) To export application from your computer to the tablet, follow these steps:
 Connect your tablet to your computer with a USB cable. On your tablet, select 'My Files' --> go to 'Downloads' --> Click on your APK file to install
 ```
 
+### Creating Android Studio Virtual Devices
+For our app, we tailored our designs towards specific tablet sizes. In order to do so, we followed https://developer.android.com/studio/run/managing-avds.html
+
 ### Accessing Files from Android Studio
 When familiarized with the Android Studio interface, locating our files is a simple task.
 
